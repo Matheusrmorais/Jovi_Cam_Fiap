@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+    class="[scrollbar-width:thin] [scrollbar-color:var(--color-banner)_var(--color-fundo)] [&::-webkit-scrollbar]:w-3 [&::-webkit-scrollbar-track]:bg-fundo [&::-webkit-scrollbar-thumb]:bg-banner [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border-[3px] [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-fundo [&::-webkit-scrollbar-thumb:hover]:bg-hover">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOVI Cam - Início</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-fundo pb-24 overflow-x-hidden">
+
+    <!-- Overlay Escuro (Fundo do menu) -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity duration-300 opacity-0">
+    </div>
+
+    <!-- Menu Lateral (Sidebar) -->
+    <aside id="sidebar-menu"
+        class="fixed top-0 left-0 h-full w-[85%] max-w-sm bg-banner z-[70] transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col font-inter">
+
+        <!-- Cabeçalho do Menu -->
+        <div class="flex items-center justify-between p-6">
+            <h2 class="font-poller-one font-bold text-[24px] text-white">JOVI Cam</h2>
+            <button id="close-menu" class="text-white opacity-80 hover:opacity-100 cursor-pointer p-2"
+                aria-label="Fechar menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Lista de Links -->
+        <nav class="flex flex-col gap-6 px-6 mt-4 overflow-y-auto pb-4">
+            <a href="inicio.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain"> Início
+            </a>
+
+            <a href="dicas.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain"> Dicas
+            </a>
+
+            <a href="templates.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Quadro.png" alt="Templates" class="w-6 h-6 object-contain"> Templantes
+            </a>
+
+            <a href="apresentacao_camera.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Capturar.png" alt="Câmera JOVI" class="w-6 h-6 object-contain"> Câmera JOVI
+            </a>
+
+            <a href="ranking.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain"> Ranking
+            </a>
+
+            <a href="assistente_virtual.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Assistente_Virtual.png" alt="Assistente Virtual" class="w-6 h-6 object-contain">
+                Assistente Virtual
+            </a>
+
+            <a href="desafios.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Desafio.png" alt="Desafios" class="w-6 h-6 object-contain"> Desafios
+            </a>
+
+            <a href="perfil.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain"> Perfil
+            </a>
+        </nav>
+
+        <!-- Botão Entrar ou Criar Conta -->
+        <div class="mt-auto p-6 mb-4">
+            <button
+                class="w-full bg-white text-[#1A55FF] font-bold py-3.5 rounded-xl hover:bg-gray-100 transition-colors shadow-lg cursor-pointer text-[15px]">
+                Entrar ou criar conta
+            </button>
+        </div>
+    </aside> <!-- AQUI ESTAVA O PROBLEMA! Essa tag estava faltando -->
+
+    <!-- Cabeçalho Principal -->
+    <header class="fixed top-0 left-0 right-0 bg-banner p-6 flex items-center justify-between z-40 shadow-md">
+        <button id="menu" class="p-1 text-white cursor-pointer" aria-label="Abrir menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <div class="flex items-center gap-1.5">
+            <span class="text-white text-[12px] font-light">Bem-vindo à</span>
+            <h1 class="font-poller-one font-bold text-[18px] text-white flex items-center gap-1">
+                JOVI Cam <img src="./images/inicio/Mao.png" alt="Mão" class="w-5 h-5 object-contain">
+            </h1>
+        </div>
+        <button id="entrar"
+            class="bg-white/20 hover:bg-white/30 text-white px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer">
+            <img src="./images/inicio/Usuario.png" alt="Usuário" class="w-4 h-4 object-contain"> Entrar
+        </button>
+    </header>
+
+    <main class="font-inter p-4 pt-24 flex flex-col gap-6 max-w-4xl mx-auto">
+
+        <!-- Banner Modo Visitante -->
+        <section
+            class="bg-banner text-white p-4 rounded-2xl shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <p class="text-[13px] leading-relaxed">
+                <strong>Você está no modo visitante.</strong> Faça login para salvar progresso e desbloquear
+                desafios
+            </p>
+            <button id="btn-criar-conta"
+                class="bg-white text-banner font-semibold px-4 py-2 rounded-xl text-xs shadow hover:bg-gray-100 transition-colors whitespace-nowrap cursor-pointer">
+                Criar conta
+            </button>
+        </section>
+
+        <!-- Seção: Desafio do Dia -->
+        <section class="flex flex-col gap-2">
+            <h2 class="font-bold text-titulo text-[14px] tracking-wide text-corpo">DESAFIO DO DIA</h2>
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="bg-orange-50 p-2.5 rounded-xl">
+                        <img src="./images/inicio/Desafio.png" alt="Desafio" class="w-8 h-8 object-contain">
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-orange-500 tracking-wider">DESAFIO</span>
+                        <p class="text-titulo text-[13px] font-medium">Faça login para ver o desafio de hoje</p>
+                    </div>
+                </div>
+                <span class="text-gray-400 text-lg">🔒</span>
+            </div>
+        </section>
+
+        <!-- Seção: Aprenda com a Câmera -->
+        <section id="aprenda-com-camera" class="flex flex-col gap-3">
+            <div class="flex justify-between items-center">
+                <h2 class="font-bold text-titulo text-[14px] tracking-wide text-corpo">APRENDA COM A CÂMERA</h2>
+                <a href="#" id="link-ver-tudo" class="text-banner text-xs font-semibold hover:underline">Ver tudo</a>
+            </div>
+
+            <div class="flex gap-4 overflow-x-auto pb-2 scrollbar-none">
+                <!-- Card 1 -->
+                <button id="modo-retrato"
+                    class="card-aprenda min-w-[220px] bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-2 text-left cursor-pointer hover:border-blue-200 transition-colors">
+                    <img src="./images/inicio/Modo_Retrato.png" alt="Modo Retrato"
+                        class="w-10 h-10 object-contain rounded-full">
+                    <h3 class="font-bold text-titulo text-[15px]">Modo retrato</h3>
+                    <p class="font-light text-corpo text-[12px] line-clamp-2">Focado em pessoas, aplicando desfoque
+                        de fundo...</p>
+                </button>
+                <!-- Card 2 -->
+                <button id="exposicao-dupla"
+                    class="card-aprenda min-w-[220px] bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-2 text-left cursor-pointer hover:border-blue-200 transition-colors">
+                    <img src="./images/inicio/Exposicao_Dupla.png" alt="Exposição Dupla"
+                        class="w-10 h-10 object-contain rounded-full">
+                    <h3 class="font-bold text-titulo text-[15px]">Exposição dupla</h3>
+                    <p class="font-light text-corpo text-[12px] line-clamp-2">Um recurso artístico divertido que permite
+                        sobrepor duas fotos diferentes...</p>
+                </button>
+                <!-- Card 3 -->
+                <button id="modo-noite"
+                    class="card-aprenda min-w-[220px] bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-2 text-left cursor-pointer hover:border-blue-200 transition-colors">
+                    <img src="./images/inicio/Modo_Noite.png" alt="Modo Noite"
+                        class="w-10 h-10 object-contain rounded-full">
+                    <h3 class="font-bold text-titulo text-[15px]">Modo noite</h3>
+                    <p class="font-light text-corpo text-[12px] line-clamp-2">Fotos incríveis sem luz...</p>
+                </button>
+            </div>
+        </section>
+
+        <!-- Seção: Explorar -->
+        <section class="flex flex-col gap-3">
+            <h2 class="font-bold text-titulo text-[14px] tracking-wide text-gray-500">EXPLORAR</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Card: Cards pré-prontos -->
+                <button id="btn-cards-prontos"
+                    class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-2 text-left cursor-pointer hover:border-blue-200 transition-colors">
+                    <img src="./images/inicio/Cards_Prontos.png" alt="Cards pré-prontos"
+                        class="w-10 h-10 object-contain">
+                    <h3 class="font-bold text-titulo text-[15px]">Cards pré-prontos</h3>
+                    <p class="font-light text-corpo text-[12px]">Templates prontos para usar</p>
+                </button>
+
+                <!-- Card: Câmera JOVI -->
+                <button id="btn-camera-jovi"
+                    class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-2 text-left cursor-pointer hover:border-blue-200 transition-colors">
+                    <img src="./images/inicio/Camera.png" alt="Câmera JOVI" class="w-10 h-10 object-contain">
+                    <h3 class="font-bold text-titulo text-[15px]">Câmera JOVI</h3>
+                    <p class="font-light text-corpo text-[12px]">Conheça todos os recursos da sua câmera...</p>
+                </button>
+
+                <!-- Card: Ranking -->
+                <button id="btn-ranking"
+                    class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-2 text-left cursor-pointer hover:border-blue-200 transition-colors">
+                    <img src="./images/inicio/Ranking.png" alt="Ranking" class="w-10 h-10 object-contain">
+                    <h3 class="font-bold text-titulo text-[15px]">Ranking</h3>
+                    <p class="font-light text-corpo text-[12px]">Veja quem está na frente</p>
+                </button>
+
+                <!-- Card: Assistente Virtual -->
+                <button id="btn-assistente"
+                    class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-2 text-left cursor-pointer hover:border-blue-200 transition-colors">
+                    <img src="./images/inicio/Assistente_Virtual.png" alt="Assistente Virtual"
+                        class="w-10 h-10 object-contain">
+                    <h3 class="font-bold text-titulo text-[15px]">Assistente Virtual</h3>
+                    <p class="font-light text-corpo text-[12px]">Tire dúvidas sobre a câmera</p>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 h-16 flex items-center justify-around px-2 z-40 text-corpo">
+        <a href="inicio.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain mb-1">Início
+            </span>
+        </a>
+
+        <a href="dicas.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain mb-1">Dicas
+            </span>
+        </a>
+
+        <a href="#" id="btn-capturar" class="relative -mt-8 flex flex-col items-center cursor-pointer text-center">
+            <span
+                class="w-14 h-14 rounded-full bg-banner border-4 border-white shadow-lg flex items-center justify-center">
+                <img src="./images/menu/Capturar.png" alt="Capturar" class="w-8 h-8 object-contain">
+            </span>
+            <span class="text-[10px] text-banner font-semibold mt-0.5">Capturar</span>
+        </a>
+
+        <a href="ranking.html"
+            class="flex flex-col items-center justify-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain mb-1">Ranking
+            </span>
+        </a>
+
+        <a href="perfil.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain mb-1">Perfil
+            </span>
+        </a>
+    </nav>
+
+    <script src="./js/inicio.js"></script>
+    <script src="./js/apresentacao_camera.js"></script>
+    <script src="./js/menu.js"></script>
+</body>
+
+</html>

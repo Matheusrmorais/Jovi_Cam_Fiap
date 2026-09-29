@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-banner: #1453ED;
+    --color-hover: #193885;
+    --color-fundo: #ECEFF8;
+    --color-corpo: #64748B;
+    --color-titulo: #1E293B;
+    --font-poller-one: 'Poller One', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+}

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="[scrollbar-width:thin] 
+    [scrollbar-color:var(--color-banner)_var(--color-fundo)] 
+    [&::-webkit-scrollbar]:w-3 
+    [&::-webkit-scrollbar-track]:bg-fundo 
+    [&::-webkit-scrollbar-thumb]:bg-banner 
+    [&::-webkit-scrollbar-thumb]:rounded-full 
+    [&::-webkit-scrollbar-thumb]:border-[3px] 
+    [&::-webkit-scrollbar-thumb]:border-solid 
+    [&::-webkit-scrollbar-thumb]:border-fundo 
+    [&::-webkit-scrollbar-thumb:hover]:bg-hover">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação da Câmera</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-fundo ">
+
+    <!-- Overlay Escuro (Fundo do menu) -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity duration-300 opacity-0">
+    </div>
+
+    <!-- Menu Lateral (Sidebar) -->
+    <aside id="sidebar-menu"
+        class="fixed top-0 left-0 h-full w-[85%] max-w-sm bg-[#1A55FF] z-[70] transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col font-inter">
+
+        <!-- Cabeçalho do Menu -->
+        <div class="flex items-center justify-between p-6">
+            <h2 class="font-poller-one font-bold text-[24px] text-white">JOVI Cam</h2>
+            <button id="close-menu" class="text-white opacity-80 hover:opacity-100 cursor-pointer p-2"
+                aria-label="Fechar menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Lista de Links -->
+        <nav class="flex flex-col gap-6 px-6 mt-4 overflow-y-auto pb-4">
+            <a href="inicio.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain"> Início
+            </a>
+
+            <a href="dicas.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain"> Dicas
+            </a>
+
+            <a href="templates.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Quadro.png" alt="Templates" class="w-6 h-6 object-contain"> Templantes
+            </a>
+
+            <a href="apresentacao_camera.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Capturar.png" alt="Câmera JOVI" class="w-6 h-6 object-contain"> Câmera JOVI
+            </a>
+
+            <a href="ranking.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain"> Ranking
+            </a>
+
+            <a href="assistente_virtual.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Assistente_Virtual.png" alt="Assistente Virtual" class="w-6 h-6 object-contain">
+                Assistente Virtual
+            </a>
+
+            <a href="desafios.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Desafio.png" alt="Desafios" class="w-6 h-6 object-contain"> Desafios
+            </a>
+
+            <a href="perfil.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain"> Perfil
+            </a>
+        </nav>
+
+
+        <div class="mt-auto p-6 mb-4">
+            <button
+                class="w-full bg-white text-[#1A55FF] font-bold py-3.5 rounded-xl hover:bg-gray-100 transition-colors shadow-lg cursor-pointer text-[15px]">
+                Entrar ou criar conta
+            </button>
+        </div>
+    </aside>
+
+    <header class="fixed top-0 left-0 right-0 bg-banner p-6 flex items-center">
+        <section class="flex items-center gap-4">
+            <button id="menu" class="p-1 text-white cursor-pointer" aria-label="Abrir menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <img src="./images/menu/Capturar.png" alt="Camera Jovi" class=" bg-white/20 p-1.5 rounded-lg">
+            <h1 class="font-poller-one font-bold text-[20px] text-white">Câmera JOVI</h1>
+        </section>
+    </header>
+
+    <main class="font-inter p-6 pt-32 pb-24">
+
+        <section id="camera-jovi">
+            <h2 class="font-bold text-titulo text-[18px]">Câmera JOVI</h2>
+            <p class="font-light text-corpo mb-4 text-[14px]">Conheça os recursos da sua câmera e aprenda como usar cada
+                função para capturar fotos mais bonitas, nítidas e profissionais em qualquer situação.</p>
+        </section>
+
+        <section id="ficha-tecnica" class="flex flex-col gap-3">
+
+            <h2 class="font-bold text-titulo text-[16px]">Ficha técnica</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <button id="detalhes-tecnicos" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Detalhes.png" alt="Detalhes técnicos da câmera"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Detalhes técnicos da câmera</h3>
+                            <p class="font-light text-corpo text-[14px]">Descubra os detalhes técnicos de uma forma
+                                simples e descomplicada.</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="configuracao-camera" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Config.png" alt="Configuração da câmera"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Configuração da Câmera</h3>
+                            <p class="font-light text-corpo text-[14px]">Descubra todas as funções das configurações da
+                                câmera.</p>
+                        </div>
+                    </div>
+                </button>
+
+            </div>
+
+        </section>
+
+        <section id="recursos-camera" class="flex flex-col gap-3">
+
+            <h2 class="font-bold text-titulo text-[18px]">Recursos da câmera</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <button id="foto" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Foto.png" alt="Foto"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Foto (Photo)</h3>
+                            <p class="font-light text-corpo text-[14px]">O modo padrão para o dia a dia. Conta com
+                                ajustes automáticos inteligentes que identificam o cenário e otimizam cores e contraste,
+                                clique para saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="video" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Video.png" alt="Video"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Vídeo (Video)</h3>
+                            <p class="font-light text-corpo text-[14px]">Gravação de vídeos com suporte a alta resolução
+                                de até 4K a 60fps nas principais lentes, com estabilização otimizada, clique para saber
+                                mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="modo-retrato" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Modo_Retrato.png" alt="Modo retrato"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Modo retrato</h3>
+                            <p class="font-light text-corpo text-[14px]">Focado em pessoas, aplicando desfoque de fundo
+                                (bokeh) com simulação de lentes clássicas da ZEISS e distâncias focais dedicadas (como
+                                85mm e 100mm), clique para saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="modo-noite" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Modo_Noite.png" alt="Modo noite"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Modo noite</h3>
+                            <p class="font-light text-corpo text-[14px]">Combina múltiplos disparos em baixa
+                                luminosidade para puxar mais luz, reduzir ruídos e entregar imagens noturnas nítidas sem
+                                estourar os pontos de luz, clique para saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="micro-movie" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Micro_Movie.png" alt="Micro movie"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Micro movie</h3>
+                            <p class="font-light text-corpo text-[14px]">Um modo voltado para criadores que ajuda a
+                                gravar clipes curtos com modelos prontos, transições e trilhas sonoras automáticas,
+                                clique para saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="modo-panorama" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Modo_Panorama.png" alt="Modo Panorama"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Modo Panorama</h3>
+                            <p class="font-light text-corpo text-[14px]">Perfeito para capturar paisagens horizontais ou
+                                verticais gigantescas, unindo várias fotos em uma só imagem panorâmica contínua, clique
+                                para saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="camera-lenta" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Camera_Lenta.png" alt="Camera Lenta"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Câmera Lenta (Slow Motion)</h3>
+                            <p class="font-light text-corpo text-[14px]">Grava vídeos com alta taxa de quadros por
+                                segundo para desacelerar movimentos rápidos (como gotas d'água, animais correndo ou
+                                esportes) com bastante fluidez, clique para saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="timelapse" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Timelapse.png" alt="Timelapse"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Timelapse (Acelerado)</h3>
+                            <p class="font-light text-corpo text-[14px]">Ideal para registrar o pôr do sol, o movimento
+                                das nuvens ou o trânsito da cidade, comprimindo horas de gravação em poucos segundos de
+                                vídeo fluido, clique para saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="scanner-documentos" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Scanner_Documentos.png" alt="Scanner de Documentos"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Ultra HD Document (Scanner de Documentos)</h3>
+                            <p class="font-light text-corpo text-[14px]">Um modo inteligente que detecta automaticamente
+                                as bordas de papéis, cartões ou páginas de livros, endireita a imagem e remove reflexos
+                                para transformar tudo em um PDF ou foto digital com cara de scanner profissional.,
+                                clique para saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="modo-pro" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Modo_Pro.png" alt="Modo Pro (Manual)"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Modo Pro (Manual)</h3>
+                            <p class="font-light text-corpo text-[14px]">Para os usuários que querem ir além do
+                                automático. Ele libera o controle direto sobre parâmetros como ISO, velocidade do
+                                obturador, balanço de branco e foco manual, clique para saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="exposicao-dupla" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Exposicao_Dupla.png" alt="Exposição Dupla"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Exposição Dupla (Double Exposure)</h3>
+                            <p class="font-light text-corpo text-[14px]">Um recurso artístico divertido que permite
+                                sobrepor duas fotos diferentes em uma única imagem criando efeitos visuais criativos e
+                                conceituais, clique para saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="retratos" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Retratos.png" alt="Lentes ZEISS Ópticas"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Retratos Estilo ZEISS (85mm e 100mm)</h3>
+                            <p class="font-light text-corpo text-[14px]">Simulações de lentes clássicas de câmeras
+                                profissionais dedicadas a retratos, criando aquele desfoque de fundo (bokeh) com
+                                formatos de luz personalizados e cortes super precisos ao redor da pessoa, clique para
+                                saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="ai-stage-mode" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Modo_Palco.png"
+                            alt="AI Stage Mode (Modo Palco / Eventos)" class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">AI Stage Mode (Modo Palco / Eventos)</h3>
+                            <p class="font-light text-corpo text-[14px]">Um recurso inteligente projetado para otimizar
+                                fotos tiradas à distância em shows, apresentações ou ambientes com luzes complexas e
+                                dinâmicas, ajudando a equilibrar o brilho e a nitidez do artista no palco, clique para
+                                saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="zoom-ia" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Zoom.png" alt="Zoom com IA"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Zoom com IA (Até 100x com Upscaling)</h3>
+                            <p class="font-light text-corpo text-[14px]">Usa algoritmos de inteligência artificial para
+                                resgatar texturas e contornos quando o usuário abusa do zoom digital de longo alcance,
+                                facilitando a visualização de detalhes distantes, clique para saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="ferramentas-edicao" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Ferramentas_Edicao.png" alt="Ferramentas Edição"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Magic Move & Image Expander (Ferramentas de
+                                Edição)</h3>
+                            <p class="font-light text-corpo text-[14px]">Recursos embutidos no sistema para manipular
+                                elementos nas fotos ou expandir as bordas de uma imagem de forma automática logo após o
+                                clique, clique para saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+                <button id="modo-grupo" class="flex text-left bg-white gap-4 p-4 border rounded-lg border-white items-center shadow hover:bg-gray-100
+                hover:border-gray-100 transition-colors duration-200 cursor-pointer">
+                    <div class="flex gap-4 items-center">
+                        <img src="./images/apresentacao_camera/Modo_Grupo.png" alt="Ferramentas Edição"
+                            class="w-12 h-12 object-contain shrink-0">
+                        <div>
+                            <h3 class="font-bold text-titulo text-[16px]">Modo Grupo na Câmera Frontal (Group Selfie)
+                            </h3>
+                            <p class="font-light text-corpo text-[14px]">A câmera de selfie de 50 MP possui um campo de
+                                visão super amplo (92°) e ajuste de zoom inteligente (0.8x a 2x), permitindo que todo
+                                mundo apareça na foto sem precisar espremer o grupo ou usar um bastão de selfie, clique
+                                para saber mais!</p>
+                        </div>
+                    </div>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 h-16 flex items-center justify-around px-2 z-40 text-corpo">
+        <a href="inicio.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain mb-1">Início
+            </span>
+        </a>
+
+        <a href="dicas.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain mb-1">Dicas
+            </span>
+        </a>
+
+        <a href="#" id="btn-capturar" class="relative -mt-8 flex flex-col items-center cursor-pointer text-center">
+            <span
+                class="w-14 h-14 rounded-full bg-banner border-4 border-white shadow-lg flex items-center justify-center">
+                <img src="./images/menu/Capturar.png" alt="Capturar" class="w-8 h-8 object-contain">
+            </span>
+            <span class="text-[10px] text-banner font-semibold mt-0.5">Capturar</span>
+        </a>
+
+        <a href="ranking.html"
+            class="flex flex-col items-center justify-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain mb-1">Ranking
+            </span>
+        </a>
+
+        <a href="perfil.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain mb-1">Perfil
+            </span>
+        </a>
+    </nav>
+
+    <script src="./js/apresentacao_camera.js"></script>
+    <script src="./js/menu.js"></script>
+</body>
+
+</html>

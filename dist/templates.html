@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>JoviCam | Templates </title>
+</head>
+
+<body class="bg-gray-200 min-h-screen overflow-x-hidden">
+
+    <!-- Overlay Escuro (Fundo do menu) - Faltava este item! -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity duration-300 opacity-0">
+    </div>
+
+    <!-- Menu Lateral (Sidebar) -->
+    <aside id="sidebar-menu"
+        class="fixed top-0 left-0 h-full w-[85%] max-w-sm bg-[#1A55FF] z-[70] transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col font-inter">
+
+        <!-- Cabeçalho do Menu -->
+        <div class="flex items-center justify-between p-6">
+            <h2 class="font-poller-one font-bold text-[24px] text-white">JOVI Cam</h2>
+            <button id="close-menu" class="text-white opacity-80 hover:opacity-100 cursor-pointer p-2"
+                aria-label="Fechar menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Lista de Links -->
+        <nav class="flex flex-col gap-6 px-6 mt-4 overflow-y-auto pb-4">
+            <a href="inicio.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain"> Início
+            </a>
+
+            <a href="dicas.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain"> Dicas
+            </a>
+
+            <a href="templates.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Quadro.png" alt="Templates" class="w-6 h-6 object-contain"> Templantes
+            </a>
+
+            <a href="apresentacao_camera.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Capturar.png" alt="Câmera JOVI" class="w-6 h-6 object-contain"> Câmera JOVI
+            </a>
+
+            <a href="ranking.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain"> Ranking
+            </a>
+
+            <a href="assistente_virtual.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Assistente_Virtual.png" alt="Assistente Virtual" class="w-6 h-6 object-contain">
+                Assistente Virtual
+            </a>
+
+            <a href="desafios.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Desafio.png" alt="Desafios" class="w-6 h-6 object-contain"> Desafios
+            </a>
+
+            <a href="perfil.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain"> Perfil
+            </a>
+        </nav>
+
+
+        <div class="mt-auto p-6 mb-4">
+            <button
+                class="w-full bg-white text-[#1A55FF] font-bold py-3.5 rounded-xl hover:bg-gray-100 transition-colors shadow-lg cursor-pointer text-[15px]">
+                Entrar ou criar conta
+            </button>
+        </div>
+    </aside>
+
+    <!-- Tamanho Tela Celular -->
+    <div class="w-full min-h-screen bg-fundo shadow-2xl overflow-hidden flex flex-col">
+        <!-- CABEÇALHO -->
+        <header class="bg-banner text-white px-4 sm:px-6 lg:px-8 pt-6 pb-5 shadow-md">
+            <div class="flex items-center gap-3">
+                <!-- Icone Menu - ID alterado de btn-menu para menu -->
+                <button id="menu" class="p-1 cursor-pointer hover:bg-white/30 transition rounded-lg"
+                    aria-label="Abrir menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <!-- Icon img -->
+                <span class="bg-white/20 p-1.5 rounded-lg">
+                    <img src="./images/templantes/Quadro 1.png" alt="">
+                </span>
+                <h1 class="font-poller-one font-bold text-50px text-white">Templates</h1>
+            </div>
+
+        </header>
+
+
+
+        <!-- Conteudo -->
+        <main class="flex-1 overflow-y-auto px-4 sm:px-6 lg:px-8 pb-24">
+            <section class="mt-4">
+                <h2 class="text-lg font-bold text-titulo">Templates pré prontos</h2>
+                <p class="text-sm text-corpo mt-1 leading-snug">Escolha um card de acordo com sua necessidade.
+                    As câmeras serão configuradas automaticamente com as melhores definições para cada cenário.
+                </p>
+            </section>
+            <!-- Atalhos -->
+            <section class="mt-4 flex flex-wrap justify-center gap-2 text-titulo">
+                <button data-template="Ambiente Noturno"
+                    class="template-card flex flex-col items-center justify-center gap-1 w-20 sm:w-24 bg-white border cursor-pointer border-gray-300 hover:border-blue-400 hover:bg-blue-50 rounded-2xl p-2 ">
+
+                    <img src="./images/templantes/Lua.png" alt="">
+
+                    <span class="text-[10px] text-center leading-tight">Ambiente Noturno</span>
+                </button>
+                <button data-template="Ambiente Claro"
+                    class="template-card flex flex-col items-center justify-center gap-1 w-20 sm:w-24 bg-white border cursor-pointer border-gray-300 hover:border-blue-400 hover:bg-blue-50 rounded-2xl p-2">
+                    <img src="./images/templantes/Sol.png" alt="">
+                    <span class="text-[10px] text-center leading-tight ">Ambiente Claro</span>
+                </button>
+
+                <button data-template="Ambiente Interno"
+                    class="template-card flex flex-col items-center justify-center gap-1 w-20 sm:w-24 bg-white border cursor-pointer border-gray-300 hover:border-blue-400 hover:bg-blue-50 rounded-2xl p-2">
+                    <img src="./images/templantes/Home.png" alt="">
+
+                    <span class="text-[10px] text-center leading-tight">Ambiente Interno</span>
+                </button>
+
+                <button data-template="Ambiente Movimentado"
+                    class="template-card flex flex-col items-center justify-center gap-1 w-20 sm:w-24 bg-white border cursor-pointer border-gray-300 hover:border-blue-400 hover:bg-blue-50 rounded-2xl p-2">
+                    <img src="./images/templantes/People.png" alt="">
+                    <span class="text-[10px] text-center leading-tight">Alta Movimentação</span>
+                </button>
+
+                <button data-template="Personalizado"
+                    class="template-card flex flex-col items-center justify-center gap-1 w-20 sm:w-24 bg-white border cursor-pointer border-gray-300 hover:border-blue-400 hover:bg-blue-50 rounded-2xl p-2">
+                    <img src="./images/templantes/Config.png" alt="">
+
+                    <span class="text-[10px]  text-center leading-tight">Personalizado</span>
+                </button>
+
+                <button data-template="Ambiente Chuvoso"
+                    class="template-card flex flex-col items-center justify-center gap-1 w-20 sm:w-24 bg-white border cursor-pointer border-gray-300 hover:border-blue-400 hover:bg-blue-50 rounded-2xl p-2">
+
+                    <img src="./images/templantes/Rain.png" alt="">
+
+                    <span class="text-[10px] text-gray-700 text-center leading-tight">Dias Chuvosos</span>
+                </button>
+            </section>
+            <!-- Cards -->
+            <section class="mt-6 flex items-center gap-1">
+                <h2 class="text-base font-bold text-titulo">Exemplos de cada card</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path stroke-linecap="round" d="M12 16v-4m0-4h.01" />
+                </svg>
+            </section>
+            <!-- Cards exemplos -->
+            <section class="mt-3 space-y-3 lg:grid lg:grid-cols-2 lg:gap-4 lg:space-y-0">
+                <!-- Card 1: Ambiente Noturno -->
+                <article
+                    class="template-card flex items-center gap-3 bg-white border border-gray-100 rounded-2xl shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow"
+                    data-template="Ambiente Noturno" data-video="./video/Ambiente_Noturno.mp4">
+                    <img src="./images/templantes/Lua.png" alt="">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="font-bold text-titulo text-sm">Ambiente Noturno</h3>
+                        <p class="text-xs text-corpo leading-snug">Ideal para locais com pouca iluminação ou durante
+                            a noite.</p>
+
+                        <span
+                            class="inline-block mt-1 text-[10px] font-semibold text-blue-600 border border-blue-500 rounded-full px-2 py-0.5">Exemplo</span>
+                    </div>
+                    <div
+                        class="preview-btn relative w-16 h-10 sm:w-20 sm:h-12 shrink-0 rounded-lg overflow-hidden cursor-pointer">
+                        <img src="./images/templantes/Ambiente_Noturno.png" alt=""
+                            class="absolute inset-0 w-full h-full object-cover">
+                        <span class="absolute inset-0 flex items-center justify-center">
+                            <span class="w-6 h-6 rounded-full bg-white/90 flex items-center justify-center">
+                                <svg class="w-3 h-3 text-blue-600 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </span>
+                        </span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 shrink-0" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </article>
+                <!-- Card 2: Ambiente Claro -->
+                <article
+                    class="template-card flex items-center gap-3 bg-white border border-gray-100 rounded-2xl shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow "
+                    data-template="Ambiente Claro" data-video="./video/Ambiente_Claro.mp4">
+                    <img src="./images/templantes/Sol.png" alt="">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="font-bold text-titulo text-sm">Ambiente Claro</h3>
+                        <p class="text-xs text-corpo leading-snug">Ideal para ambientes com muita luz durante o dia.
+                        </p>
+                        <span
+                            class="inline-block mt-1 text-[10px] font-semibold text-blue-600 border border-blue-500 rounded-full px-2 py-0.5">Exemplo</span>
+                    </div>
+                    <div
+                        class="preview-btn relative w-16 h-10 sm:w-20 sm:h-12 shrink-0 rounded-lg overflow-hidden cursor-pointer ">
+                        <img src="./images/templantes/Ambiente_Claro.png" alt="">
+                        <span class="absolute inset-0 flex items-center justify-center">
+                            <span class="w-6 h-6 rounded-full bg-white/90 flex items-center justify-center">
+                                <svg class="w-3 h-3 text-blue-600 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </span>
+                        </span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 shrink-0" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </article>
+                <!-- Card 3: Ambiente Interno -->
+                <article
+                    class="template-card flex items-center gap-3 bg-white border border-gray-100 rounded-2xl shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow "
+                    data-template="Ambiente Interno" data-video="./video/Ambiente_Interno.mp4">
+                    <img src="./images/templantes/Home.png" alt="">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="font-bold text-titulo text-sm">Ambiente Interno</h3>
+                        <p class="text-xs text-corpo leading-snug">Ideal para locais com pouca iluminação ou durante
+                            a
+                            noite.</p>
+                        <span
+                            class="inline-block mt-1 text-[10px] font-semibold text-blue-600 border border-blue-500 rounded-full px-2 py-0.5">Exemplo</span>
+                    </div>
+                    <div
+                        class="preview-btn relative w-16 h-10 sm:w-20 sm:h-12 shrink-0 rounded-lg overflow-hidden cursor-pointer ">
+                        <img src="./images/templantes/Ambiente_Interno.png" alt="">
+                        <span class="absolute inset-0 flex items-center justify-center">
+                            <span class="w-6 h-6 rounded-full bg-white/90 flex items-center justify-center">
+                                <svg class="w-3 h-3 text-blue-600 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </span>
+                        </span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 shrink-0" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </article>
+                <!-- Card 4: Ambiente Movimentado -->
+                <article
+                    class="template-card flex items-center gap-3 bg-white border border-gray-100 rounded-2xl shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow "
+                    data-template="Ambiente Movimentado" data-video="./video/Ambiente_Movimentado.mp4">
+                    <img src="./images/templantes/People.png" alt="">
+
+                    <div class="flex-1 min-w-0">
+                        <h3 class="font-bold text-titulo text-sm">Alta Movimentação</h3>
+                        <p class="text-xs text-corpo leading-snug">Melhor configuração para locais com grande
+                            circulação de pessoas.</p>
+                        <span
+                            class="inline-block mt-1 text-[10px] font-semibold text-blue-600 border border-blue-500 rounded-full px-2 py-0.5">Exemplo</span>
+                    </div>
+                    <div
+                        class="preview-btn relative w-16 h-10 sm:w-20 sm:h-12 shrink-0 rounded-lg overflow-hidden cursor-pointer ">
+                        <img src="./images/templantes/Ambiente_Movimentado.png" alt="">
+                        <span class="absolute inset-0 flex items-center justify-center">
+                            <span class="w-6 h-6 rounded-full bg-white/90 flex items-center justify-center">
+                                <svg class="w-3 h-3 text-blue-600 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </span>
+                        </span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 shrink-0" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </article>
+                <!-- Card 5: Ambiente Chuvoso -->
+                <article
+                    class="template-card flex items-center gap-3 bg-white border border-gray-100 rounded-2xl shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow "
+                    data-template="Ambiente Chuvoso" data-video="./video/Ambiente_Chuvoso.mp4">
+                    <img src="./images/templantes/Rain.png" alt="">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="font-bold text-titulo text-sm">Ambiente Chuvoso</h3>
+                        <p class="text-xs text-corpo leading-snug">Otimizado para condições climáticas com chuva ou
+                            nublado</p>
+                        <span
+                            class="inline-block mt-1 text-[10px] font-semibold text-blue-600 border border-blue-500 rounded-full px-2 py-0.5">Exemplo</span>
+                    </div>
+                    <div
+                        class="preview-btn relative w-16 h-10 sm:w-20 sm:h-12 shrink-0 rounded-lg overflow-hidden cursor-pointer ">
+                        <img src="./images/templantes/Ambiente_Chuvoso.png" alt="">
+                        <span class="absolute inset-0 flex items-center justify-center">
+                            <span class="w-6 h-6 rounded-full bg-white/90 flex items-center justify-center">
+                                <svg class="w-3 h-3 text-blue-600 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </span>
+                        </span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 shrink-0" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </article>
+                <!-- Card 6: Personalizado -->
+                <article
+                    class="template-card flex items-center gap-3 bg-white border border-gray-100 rounded-2xl shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow "
+                    data-template="Personalizado" data-video="./video/Personalizado.mp4">
+                    <img src="./images/templantes/Config.png" alt="">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="font-bold text-titulo text-sm">Personalizado</h3>
+                        <p class="text-xs text-corpo leading-snug">Configure manualmente todos os parâmetros da
+                            imagem.</p>
+                        <span
+                            class="inline-block mt-1 text-[10px] font-semibold text-blue-600 border border-blue-500 rounded-full px-2 py-0.5">Exemplo</span>
+                    </div>
+                    <div
+                        class="preview-btn relative w-16 h-10 sm:w-20 sm:h-12 shrink-0 rounded-lg overflow-hidden cursor-pointer ">
+                        <img src="./images/templantes/Ambiente_Noturno.png" alt="">
+                        <span class="absolute inset-0 flex items-center justify-center">
+                            <span class="w-6 h-6 rounded-full bg-white/90 flex items-center justify-center">
+                                <svg class="w-3 h-3 text-blue-600 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </span>
+                        </span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-500 shrink-0" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </article>
+
+            </section>
+
+            <!-- Menu -->
+
+            <nav
+                class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 h-16 flex items-center justify-around px-2 z-40 text-corpo">
+                <a href="inicio.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+                    <span
+                        class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                        <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain mb-1">Início
+                    </span>
+                </a>
+
+                <a href="dicas.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+                    <span
+                        class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                        <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain mb-1">Dicas
+                    </span>
+                </a>
+
+                <a href="#" id="btn-capturar"
+                    class="relative -mt-8 flex flex-col items-center cursor-pointer text-center">
+                    <span
+                        class="w-14 h-14 rounded-full bg-banner border-4 border-white shadow-lg flex items-center justify-center">
+                        <img src="./images/menu/Capturar.png" alt="Capturar" class="w-8 h-8 object-contain">
+                    </span>
+                    <span class="text-[10px] text-banner font-semibold mt-0.5">Capturar</span>
+                </a>
+
+                <a href="ranking.html"
+                    class="flex flex-col items-center justify-center text-[10px] gap-0.5 cursor-pointer text-center">
+                    <span
+                        class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                        <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain mb-1">Ranking
+                    </span>
+                </a>
+
+                <a href="perfil.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+                    <span
+                        class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                        <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain mb-1">Perfil
+                    </span>
+                </a>
+            </nav>
+
+
+            <div id="modelovideo" style="display:none;"
+                class="fixed inset-0 bg-black/50 z-50 items-center justify-center p-4">
+                <div style="max-width:500px; width:100%;;"
+                    class="bg-white rounded-2xl overflow-hidden w-full relative shadow-xl">
+                    <button id="closemodelovideo"
+                        class="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-black/60 text-white flex items-center justify-center z-10 cursor-pointer text-xs">
+                        ✕
+                    </button>
+                    <video id="videomodelo" muted autoplay loop class="w-full h-96 object-contain block bg-black"
+                        src="">
+                        Seu navegador não suporta vídeo.
+                    </video>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/interacaocard.js"></script>
+
+</body>
+
+</html>

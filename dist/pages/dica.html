@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <title>JoviCam | Dicas Iniciante </title>
+</head>
+
+<body class="bg-gray-200 min-h-screen">
+
+    <!-- Tamanho Tela Celular -->
+    <div class="w-full min-h-screen bg-fundo shadow-2xl overflow-hidden flex flex-col">
+        <!-- CABEÇALHO -->
+        <header id="header-dica" class=" text-white px-4 sm:px-6 lg:px-8 pt-6 pb-5 shadow-md">
+            <div class="flex items-center gap-3">
+                <!-- Icone Menu -->
+                <a id="btn-voltar" href=""><img src="../images/menu/Voltar.png" alt=""></a>
+                <!-- Icon img -->
+                <span class="bg-white/20 p-1.5 rounded-lg">
+                    <img src="../images/dicas/Guia_Dicas.png" alt="">
+                </span>
+                <h1 id="titulo-dica" class="font-poller-one font-bold text-white"></h1>
+
+            </div>
+
+        </header>
+        <!-- Conteudo -->
+        <main class="flex-1 overflow-y-auto px-4 sm:px-6 lg:px-8 pb-24">
+
+            <!-- Cards dicas -->
+            <section class="mt-3 space-y-3 lg:grid lg:grid-cols-1 lg:gap-4 lg:space-y-0">
+
+                <div class="flex-1 min-w-0">
+
+                    <h4 id="titulo-explicacao" class="text-3xl font-bold mb-4">
+                        Explicação completa:
+                    </h4>
+
+                    <div id="borda" class="bg-white border border-l-4 
+                rounded-2xl shadow-sm p-6">
+
+                        <span id="texto-dica" class="block text-lg font-medium leading-8 text-slate-600">
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- Menu -->
+
+                <nav
+                    class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 h-16 flex items-center justify-around px-2 z-50 text-corpo">
+                    <button id="inicio" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer">
+                        <span
+                            class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                            <img src="../images/menu/Inicio.png" alt="">Inicio
+                        </span>
+                    </button>
+
+                    <button id="dicas" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer">
+                        <span
+                            class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                            <img src="../images/menu/Dicas.png" alt="">Dicas
+                        </span>
+                    </button>
+
+                    <button id="capturar" class="relative -mt-8 flex flex-col items-center cursor-pointer">
+                        <span
+                            class="w-14 h-14 rounded-full bg-banner border-4 border-white shadow-lg flex items-center justify-center">
+                            <img src="../images/menu/Capturar.png" alt="">
+                        </span>
+                        <span class="text-[10px] text-banner font-semibold mt-0.5">
+                            Capturar
+                        </span>
+                    </button>
+
+                    <button id="ranking"
+                        class="flex flex-col items-center justify-center text-[10px] gap-0.5 cursor-pointer">
+                        <span
+                            class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                            <img src="../images/menu/Ranking.png" alt="" class="w-6 flex items-center">Ranking
+                        </span>
+                    </button>
+
+                    <button id="perfil" class="flex flex-col items-center  text-[10px] gap-0.5 cursor-pointer">
+                        <span
+                            class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                            <img src="../images/menu/Perfil.png" alt="">Perfil
+                        </span>
+                    </button>
+                </nav>
+
+
+
+        </main>
+
+    </div>
+
+    <script src="../js/dicas.js"></script>
+    <script src="./js/interacaocard.js"></script>
+
+
+
+
+
+</body>
+
+</html>

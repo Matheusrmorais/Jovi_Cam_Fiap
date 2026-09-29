@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>JoviCam | Dicas </title>
+</head>
+
+<body class="bg-gray-200 min-h-screen overflow-x-hidden">
+
+    <!-- Overlay Escuro (Fundo do menu) -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity duration-300 opacity-0">
+    </div>
+
+    <!-- Menu Lateral (Sidebar) -->
+    <aside id="sidebar-menu"
+        class="fixed top-0 left-0 h-full w-[85%] max-w-sm bg-[#1A55FF] z-[70] transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col font-inter">
+
+        <!-- Cabeçalho do Menu -->
+        <div class="flex items-center justify-between p-6">
+            <h2 class="font-poller-one font-bold text-[24px] text-white">JOVI Cam</h2>
+            <button id="close-menu" class="text-white opacity-80 hover:opacity-100 cursor-pointer p-2"
+                aria-label="Fechar menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Lista de Links -->
+        <nav class="flex flex-col gap-6 px-6 mt-4 overflow-y-auto pb-4">
+            <a href="inicio.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain"> Início
+            </a>
+
+            <a href="dicas.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain"> Dicas
+            </a>
+
+            <a href="templates.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Quadro.png" alt="Templates" class="w-6 h-6 object-contain"> Templantes
+            </a>
+
+            <a href="apresentacao_camera.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Capturar.png" alt="Câmera JOVI" class="w-6 h-6 object-contain"> Câmera JOVI
+            </a>
+
+            <a href="ranking.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain"> Ranking
+            </a>
+
+            <a href="assistente_virtual.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Assistente_Virtual.png" alt="Assistente Virtual" class="w-6 h-6 object-contain">
+                Assistente Virtual
+            </a>
+
+            <a href="desafios.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Desafio.png" alt="Desafios" class="w-6 h-6 object-contain"> Desafios
+            </a>
+
+            <a href="perfil.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain"> Perfil
+            </a>
+        </nav>
+
+        <!-- Botão Entrar ou Criar Conta -->
+        <div class="mt-auto p-6 mb-4">
+            <button
+                class="w-full bg-white text-[#1A55FF] font-bold py-3.5 rounded-xl hover:bg-gray-100 transition-colors shadow-lg cursor-pointer text-[15px]">
+                Entrar ou criar conta
+            </button>
+        </div>
+    </aside> <!-- CORREÇÃO AQUI: Faltava essa tag pra fechar o menu! -->
+
+    <!-- Tamanho Tela Celular -->
+    <div class="w-full min-h-screen bg-fundo shadow-2xl overflow-hidden flex flex-col">
+
+        <!-- CABEÇALHO -->
+        <header class="bg-banner text-white px-4 sm:px-6 lg:px-8 pt-6 pb-5 shadow-md">
+            <div class="flex items-center gap-3">
+
+                <button id="menu" class="p-2 text-white cursor-pointer hover:bg-white/30 transition rounded-lg"
+                    aria-label="Abrir menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <!-- Icon img -->
+                <span class="bg-white/20 p-1.5 rounded-lg">
+                    <img src="./images/dicas/Guia_Dicas.png" alt="">
+                </span>
+
+                <h1 class="font-poller-one font-bold text-50px text-white">Dicas por nível</h1>
+            </div>
+        </header>
+
+        <!-- Conteudo -->
+        <main class="flex-1 overflow-y-auto px-4 sm:px-6 lg:px-8 pb-24">
+            <section class="mt-4">
+                <h2 class="text-lg font-bold text-titulo">Dicas</h2>
+                <p class="text-sm text-corpo mt-1 leading-snug">Aprenda mais sobre sua câmera e obtenha o melhor
+                    resultado das suas fotos.
+                </p>
+            </section>
+
+            <!-- Cards -->
+            <section class="mt-6 flex items-center gap-1">
+                <h2 class="text-base font-bold text-titulo">Escolha o nivel</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path stroke-linecap="round" d="M12 16v-4m0-4h.01" />
+                </svg>
+            </section>
+
+            <!-- Cards dicas -->
+            <section class="mt-3 space-y-3 lg:grid lg:grid-cols-2 lg:gap-4 lg:space-y-0">
+                <!-- Card 1: Iniciante -->
+                <a href="./pages/dicas_cards.html?nivel=iniciante"
+                    class="flex items-center gap-3 bg-white border border-gray-100 rounded-2xl shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow">
+                    <img src="./images/dicas/Iniciante.png" alt="">
+
+                    <div class="flex-1 min-w-0">
+                        <h3 class="font-bold text-green-700 text-sm">Iniciante</h3>
+                        <p class="text-xs text-corpo leading-snug">Dicas básicas para começar a usar suas câmeras..
+                        </p>
+
+                        <span
+                            class="inline-block mt-1 text-[10px] font-semibold text-green-700 border border-green-500 rounded-full px-2 py-0.5 bg-green-100">8
+                            Dicas</span>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-green-700 shrink-0" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+
+                <!-- Card 2: Intermediário -->
+                <a href="./pages/dicas_cards.html?nivel=intermediario"
+                    class="flex items-center gap-3 bg-white border border-gray-100 rounded-2xl shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow">
+                    <img src="./images/dicas/Intermediario.png" alt="">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="font-bold text-purple-700 text-sm">Intermediário</h3>
+                        <p class="text-xs text-corpo leading-snug">Aprenda a otimizar suas configurações e recursos.
+                        </p>
+
+                        <span
+                            class="inline-block mt-1 text-[10px] font-semibold text-purple-700 border border-purple-500 rounded-full px-2 py-0.5 bg-purple-100">12
+                            Dicas</span>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-purple-700 shrink-0" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+
+                <!-- Card 3: Avançado -->
+                <a href="./pages/dicas_cards.html?nivel=avancado"
+                    class="flex items-center gap-3 bg-white border border-gray-100 rounded-2xl shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow">
+                    <img src="./images/dicas/Avancado.png" alt="">
+                    <div class="flex-1 min-w-0">
+                        <h3 class="font-bold text-orange-500 text-sm">Avançado</h3>
+                        <p class="text-xs text-corpo leading-snug">Técnicas avançadas para máxima segurança e
+                            desempenho
+                        </p>
+
+                        <span
+                            class="inline-block mt-1 text-[10px] font-semibold text-orange-500 border border-orange-300 rounded-full px-2 py-0.5">15
+                            Dicas</span>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-orange-500 shrink-0" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+
+                <!-- Card 4: Posicionamento estratégico -->
+                <span>
+                    <h2 class="text-base font-bold text-titulo">Dica em destaque</h2>
+                    <a href="./pages/dicas_cards.html?nivel=estrategica"
+                        class="flex items-center gap-3 bg-white border border-gray-100 rounded-2xl shadow-sm p-3 cursor-pointer hover:shadow-md transition-shadow">
+                        <img src="./images/dicas/Posicionamento.png" alt="">
+                        <div class="flex-1 min-w-0">
+                            <h3 class="font-bold text-titulo text-sm">Posicionamento estratégico</h3>
+                            <p class="text-xs text-corpo leading-snug">Posicione suas câmeras em locais altos e com
+                                visão ampla para evitar pontos cegos</p>
+
+                            <span
+                                class="inline-block mt-1 text-[10px] font-semibold text-blue-600 border border-blue-500 rounded-full px-2 py-0.5">4
+                                Dicas</span>
+                        </div>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-blue-500 shrink-0" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </span>
+            </section>
+
+            <!-- Nav Inferior -->
+            <nav
+                class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 h-16 flex items-center justify-around px-2 z-40 text-corpo">
+                <a href="inicio.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+                    <span
+                        class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                        <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain mb-1">Início
+                    </span>
+                </a>
+
+                <a href="dicas.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+                    <span
+                        class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                        <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain mb-1">Dicas
+                    </span>
+                </a>
+
+                <a href="#" id="btn-capturar"
+                    class="relative -mt-8 flex flex-col items-center cursor-pointer text-center">
+                    <span
+                        class="w-14 h-14 rounded-full bg-banner border-4 border-white shadow-lg flex items-center justify-center">
+                        <img src="./images/menu/Capturar.png" alt="Capturar" class="w-8 h-8 object-contain">
+                    </span>
+                    <span class="text-[10px] text-banner font-semibold mt-0.5">Capturar</span>
+                </a>
+
+                <a href="ranking.html"
+                    class="flex flex-col items-center justify-center text-[10px] gap-0.5 cursor-pointer text-center">
+                    <span
+                        class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                        <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain mb-1">Ranking
+                    </span>
+                </a>
+
+                <a href="perfil.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+                    <span
+                        class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                        <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain mb-1">Perfil
+                    </span>
+                </a>
+            </nav>
+
+        </main>
+    </div>
+
+    <script src="./js/menu.js"></script>
+</body>
+
+</html>

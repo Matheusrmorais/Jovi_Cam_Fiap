@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+    class="[scrollbar-width:thin] [scrollbar-color:var(--color-banner)_var(--color-fundo)] [&::-webkit-scrollbar]:w-3 [&::-webkit-scrollbar-track]:bg-fundo [&::-webkit-scrollbar-thumb]:bg-banner [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border-[3px] [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-fundo [&::-webkit-scrollbar-thumb:hover]:bg-hover">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-fundo min-h-screen relative pb-24 font-inter overflow-x-hidden">
+
+    <!-- Overlay Escuro (Fundo do menu) -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity duration-300 opacity-0">
+    </div>
+
+    <!-- Menu Lateral (Sidebar) -->
+    <aside id="sidebar-menu"
+        class="fixed top-0 left-0 h-full w-[85%] max-w-sm bg-[#1A55FF] z-[70] transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col font-inter">
+
+        <!-- Cabeçalho do Menu -->
+        <div class="flex items-center justify-between p-6">
+            <h2 class="font-poller-one font-bold text-[24px] text-white">JOVI Cam</h2>
+            <button id="close-menu" class="text-white opacity-80 hover:opacity-100 cursor-pointer p-2"
+                aria-label="Fechar menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Lista de Links -->
+        <nav class="flex flex-col gap-6 px-6 mt-4 overflow-y-auto pb-4">
+            <a href="inicio.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain"> Início
+            </a>
+
+            <a href="dicas.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain"> Dicas
+            </a>
+
+            <a href="templates.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Quadro.png" alt="Templates" class="w-6 h-6 object-contain"> Templantes
+            </a>
+
+            <a href="apresentacao_camera.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Capturar.png" alt="Câmera JOVI" class="w-6 h-6 object-contain"> Câmera JOVI
+            </a>
+
+            <a href="ranking.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain"> Ranking
+            </a>
+
+            <a href="assistente_virtual.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Assistente_Virtual.png" alt="Assistente Virtual" class="w-6 h-6 object-contain">
+                Assistente Virtual
+            </a>
+
+            <a href="desafios.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Desafio.png" alt="Desafios" class="w-6 h-6 object-contain"> Desafios
+            </a>
+
+            <a href="perfil.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain"> Perfil
+            </a>
+        </nav>
+
+        <!-- Botão Entrar ou Criar Conta -->
+        <div class="mt-auto p-6 mb-4">
+            <button
+                class="em-construcao w-full bg-white text-[#1A55FF] font-bold py-3.5 rounded-xl hover:bg-gray-100 transition-colors shadow-lg cursor-pointer text-[15px]">
+                Entrar ou criar conta
+            </button>
+        </div>
+    </aside>
+
+    <header class="top-0 left-0 right-0 bg-banner p-6 flex flex-col text-white">
+        <div class="flex gap-4 items-center">
+            <button id="menu" class="p-1 text-white cursor-pointer" aria-label="Abrir menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <img src="./images/desafios/Desafio.png" alt="Ícone Desafios" class="object-contain shrink">
+            <h1 class="font-poller-one font-bold text-[20px] text-white">Desafios</h1>
+        </div>
+
+        <div class="flex gap-6 bg-white/20 rounded-xl mt-4 p-3 items-center">
+            <img src="./images/desafios/Raio.png" alt="Raio" class="object-contain shrink-0">
+            <div class="flex flex-col flex-1 gap-2">
+                <p class="text-xs">Nível <span class="txt-nivel">5</span> <strong id="texto-xp"> · 620 / 1000 XP
+                    </strong> para o próximo</p>
+                <div id="fundo-barra" class="w-full h-2 bg-white/30 rounded-full">
+                    <div id="fill-xp" class="h-full bg-white rounded-full w-[62%]"></div>
+                </div>
+            </div>
+            <div class="text-center shrink-0 flex flex-col items-center">
+                <p class="text-2xl font-bold leading-none txt-nivel">5</p>
+                <p class="text-[10px] mt-1">nível</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="px-4 md:px-6 pb-24">
+
+        <section id="card-desafio-dia"
+            class="bg-white shadow-md rounded-[24px] p-5 md:p-6 relative z-10 -mt-4 mx-auto w-full md:max-w-2xl lg:max-w-4xl flex flex-col gap-5 md:gap-6">
+
+            <div class="flex gap-4 md:gap-40">
+
+                <div class="flex flex-col md:flex-row justify-between gap-5 md:gap-6">
+
+                    <div class="flex flex-col gap-3 flex-1 min-w-0">
+                        <div class="flex items-center gap-2">
+                            <img src="./images/desafios/Desafio.png" alt="Desafio" class="w-4 h-4 object-contain">
+                            <h2 class="font-bold text-[#1453ED] text-xs uppercase tracking-wide">DESAFIO DO DIA</h2>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-[#1E293B] text-[18px] md:text-[22px] leading-tight">Fotografe
+                                um
+                                objeto usando luz lateral</h3>
+                            <p class="text-[#64748B] text-sm leading-snug">A luz lateral cria sombras suaves e
+                                destaca
+                                texturas.<br> Capriche no ângulo!</p>
+
+                            <div class="flex flex-row flex-wrap gap-3 mt-1">
+                                <div class="flex items-center bg-[#ECEFF8] rounded-xl px-3 py-2 gap-2">
+                                    <img src="./images/desafios/Moeda.png" alt="" class="w-6 h-6 object-contain">
+                                    <div class="flex flex-col leading-none">
+                                        <span class="font-bold text-[#1E293B] text-sm">+50 XP</span>
+                                        <span class="text-[#64748B] text-[10px] mt-0.5">Recompensa</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center bg-[#ECEFF8] rounded-xl px-3 py-2 gap-2">
+                                    <img src="./images/desafios/Iniciante.png" alt="" class="w-6 h-6 object-contain">
+                                    <div class="flex flex-col leading-none">
+                                        <span class="font-bold text-[#1E293B] text-sm">Iniciante</span>
+                                        <span class="text-[#64748B] text-[10px] mt-0.5">Dificuldade</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="shrink-0 flex items-center justify-center">
+                    <img src="./images/desafios/Desafio_Dia.png" alt="Vaso com planta"
+                        class="object-cover w-32 h-32 md:w-44 md:h-44 rounded-2xl">
+                </div>
+
+            </div>
+
+            <div class="flex flex-row gap-3 md:gap-4 w-full">
+                <button
+                    class="em-construcao flex-1 flex justify-center items-center gap-2 border-[1.5px] border-[#1453ED] text-[#1453ED] rounded-xl py-3 text-sm font-semibold hover:bg-[#ECEFF8] transition-colors cursor-pointer">
+                    <img src="./images/desafios/Tutorial.png" alt="Tutorial" class="w-4 h-4 object-contain">
+                    Ver tutorial
+                </button>
+
+                <button
+                    class="em-construcao flex-1 flex justify-center items-center gap-2 bg-[#1453ED] text-white rounded-xl py-3 text-sm font-semibold hover:bg-blue-700 transition-colors cursor-pointer">
+                    <img src="./images/desafios/Baixar.png" alt="Baixar" class="w-4 h-4 object-contain">
+                    Enviar foto
+                </button>
+            </div>
+        </section>
+
+        <section id="missoes-diarias" class="mt-4 flex flex-col gap-4">
+
+            <h2 class="font-bold text-titulo text-base">Escolha um tipo de desafio</h2>
+
+            <div class="flex gap-4 overflow-x-auto pb-5 w-full">
+
+                <button
+                    class="em-construcao bg-white border border-banner rounded-2xl shadow-sm p-4 flex items-center gap-3 shrink-0 min-w-[160px] cursor-pointer hover:bg-[#ECEFF8]">
+
+                    <img src="./images/desafios/Diario.png" alt="Diário" class="w-5 h-5 object-contain shrink-0">
+                    <div class="flex flex-col items-start text-left">
+                        <span class="font-bold text-banner text-base">Diario</span>
+                        <p class="text-corpo text-sm">Todo dia novos desafio</p>
+                    </div>
+                </button>
+
+                <button
+                    class="em-construcao bg-white border border-banner rounded-2xl shadow-sm p-4 flex items-center gap-3 shrink-0 min-w-[160px] cursor-pointer hover:bg-[#ECEFF8]">
+
+                    <img src="./images/desafios/Semanal.png" alt="Semanal" class="w-5 h-5 object-contain shrink-0">
+                    <div class="flex flex-col items-start text-left">
+                        <span class="font-bold text-banner text-base">Semanal</span>
+                        <p class="text-corpo text-sm">Desafios especiais</p>
+                    </div>
+                </button>
+
+                <button
+                    class="em-construcao bg-white border border-banner rounded-2xl shadow-sm p-4 flex items-center gap-3 shrink-0 min-w-[160px] cursor-pointer hover:bg-[#ECEFF8]">
+
+                    <img src="./images/desafios/Avancado.png" alt="Avançado" class="w-8 h-9 object-contain shrink-0">
+                    <div class="flex flex-col items-start text-left">
+                        <span class="font-bold text-banner text-base">Avançado</span>
+                        <p class="text-corpo text-sm">Para fotógrafos experientes</p>
+                    </div>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section id="missoes-nivel" class="mt-8 flex flex-col gap-4">
+
+            <h2 class="font-bold text-titulo text-base">Missões por nível</h2>
+
+            <div class="flex gap-4 overflow-x-auto pb-5 w-full">
+
+                <button id="iniciante" type="button"
+                    class="bg-green-50 border border-green-100 rounded-[20px] shadow-sm flex flex-col items-center text-center p-4 shrink-0 min-w-[155px] cursor-pointer transition hover:scale-105 hover:rounded-[20px]">
+
+                    <img src="./images/desafios/Iniciante.png" alt="Iniciante" class="w-10 h-10 mb-2 object-contain">
+
+                    <h3 class="text-green-600 font-bold text-sm">Iniciante</h3>
+
+                    <p class="text-[10px] text-corpo leading-tight mt-1 mb-4 px-2">Aprenda o básico da fotografia
+                        com o
+                        celular</p>
+
+                    <img src="./images/desafios/Imagem_Iniciante.png" alt="Imagens exemplo" class="pb-4">
+
+                    <div class="w-full mt-auto border-t border-green-200/50 pt-3 flex justify-between items-center">
+                        <span class="text-green-600 font-bold text-[10px]">8 desafios</span>
+                        <span class="text-green-600 font-bold text-xs">&gt;</span>
+                    </div>
+
+                </button>
+
+                <button id="intermediario" type="button"
+                    class="bg-[#F0E6FF] border border-purple-100 rounded-[20px] shadow-sm flex flex-col items-center text-center p-4 shrink-0 min-w-[155px] cursor-pointer transition hover:scale-105 hover:rounded-[20px]">
+
+                    <img src="./images/desafios/Intermediario.png" alt="Intermediario"
+                        class="w-10 h-10 mb-2 object-contain">
+
+                    <h3 class="text-[#8B4DFF] font-bold text-sm">Intermediário</h3>
+
+                    <p class="text-[10px] text-corpo leading-tight mt-1 mb-4 px-2">Aprimore suas técnicas e veja a
+                        diferença</p>
+
+                    <img src="./images/desafios/Imagem_Iniciante.png" alt="Imagens exemplo" class="pb-4">
+
+                    <div class="w-full mt-auto border-t border-purple-200/50 pt-3 flex justify-between items-center">
+                        <span class="text-[#8B4DFF] font-bold text-[10px]">12 desafios</span>
+                        <span class="text-[#8B4DFF] font-bold text-xs">&gt;</span>
+                    </div>
+
+                </button>
+
+                <button id="avancado" type="button"
+                    class="bg-[#FFF1DF]/60 border border-orange-100 rounded-[20px] shadow-sm flex flex-col items-center text-center p-4 shrink-0 min-w-[155px] cursor-pointer transition hover:scale-105 hover:rounded-[20px]">
+
+                    <img src="./images/desafios/Avancado.png" alt="Avançado" class="w-10 h-10 mb-2 object-contain">
+
+                    <h3 class="text-[#FF8A00] font-bold text-sm">Avançado</h3>
+
+                    <p class="text-[10px] text-corpo leading-tight mt-1 mb-4 px-2">Desafios para quem quer ir além
+                    </p>
+
+                    <img src="./images/desafios/Imagem_Avancado.png" alt="Imagens exemplo" class="pb-4">
+
+                    <div class="w-full mt-auto border-t border-orange-200/50 pt-3 flex justify-between items-center">
+                        <span class="text-[#FF8A00] font-bold text-[10px]">15 desafios</span>
+                        <span class="text-[#FF8A00] font-bold text-xs">&gt;</span>
+                    </div>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section id="conquistas" class="mt-8 flex flex-col gap-4">
+
+            <div class="flex justify-between items-end px-1">
+                <h2 class="font-bold text-titulo text-base leading-none">Conquistas</h2>
+                <button class="em-construcao text-[#1453ED] text-sm font-semibold leading-none cursor-pointer hover:underline">
+                    Ver tudo
+                </button>
+            </div>
+
+            <div class="flex gap-4 overflow-x-auto pb-5 w-full">
+
+                <div
+                    class="bg-green-50/50 border border-green-100 rounded-[20px] shadow-sm flex flex-col items-center text-center p-4 shrink-0 w-[140px]">
+
+                    <div>
+                        <img src="./images/desafios/Conquista_Clique.png" alt="Câmera"
+                            class="w-13 h-13 object-contain shrink-0">
+                    </div>
+
+                    <h3 class="text-[#1E293B] font-bold text-sm leading-tight">Primeiro clique</h3>
+                    <p class="text-[10px] text-corpo leading-tight mt-1 mb-4">Envie sua primeira foto</p>
+
+                    <div class="mt-auto">
+                        <div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
+
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-blue-50/50 border border-blue-100 rounded-[20px] shadow-sm flex flex-col items-center text-center p-4 shrink-0 w-[140px]">
+
+
+                    <img src="./images/desafios/Conquista_Dias.png" alt="Calendário"
+                        class="w-13 h-13 object-contain shrink-0">
+
+                    <h3 class="text-[#1E293B] font-bold text-sm leading-tight">7 dias de desafio</h3>
+                    <p class="text-[10px] text-corpo leading-tight mt-1 mb-4">Complete desafios por 7 dias</p>
+
+                    <div class="w-full mt-auto flex flex-col gap-1.5">
+                        <span class="text-[#1E293B] font-bold text-[10px]">5/7</span>
+                        <div class="w-full h-1.5 bg-blue-100 rounded-full overflow-hidden">
+                            <div class="h-full bg-blue-500 rounded-full w-[71%]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-purple-50/50 border border-purple-100 rounded-[20px] shadow-sm flex flex-col items-center text-center p-4 shrink-0 w-[140px]">
+
+                    <img src="./images/desafios/Conquista_Olhar.png" alt="Estrela"
+                        class="w-13 h-13 object-contain shrink-0">
+
+                    <h3 class="text-[#1E293B] font-bold text-sm leading-tight">Olhar atento</h3>
+                    <p class="text-[10px] text-corpo leading-tight mt-1 mb-4">Complete 10 desafios</p>
+
+                    <div class="w-full mt-auto flex flex-col gap-1.5">
+                        <span class="text-[#1E293B] font-bold text-[10px]">6/10</span>
+                        <div class="w-full h-1.5 bg-purple-100 rounded-full overflow-hidden">
+                            <div class="h-full bg-purple-500 rounded-full w-[60%]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-amber-50/50 border border-amber-100 rounded-[20px] shadow-sm flex flex-col items-center text-center p-4 shrink-0 w-[140px]">
+
+                    <img src="./images/desafios/Conquista_Explorador.png" alt="Estrela"
+                        class="w-13 h-13 object-contain shrink-0">
+
+                    <h3 class="text-[#1E293B] font-bold text-sm leading-tight">Explorador</h3>
+                    <p class="text-[10px] text-corpo leading-tight mt-1 mb-4">Complete 20 desafios</p>
+
+                    <div class="w-full mt-auto flex flex-col gap-1.5">
+                        <span class="text-[#1E293B] font-bold text-[10px]">6/20</span>
+                        <div class="w-full h-1.5 bg-amber-100 rounded-full overflow-hidden">
+                            <div class="h-full bg-amber-500 rounded-full w-[30%]"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <button id="jovi-mascote"
+        class="fixed bottom-[90px] right-6 z-40 cursor-pointer transition-all duration-300 hover:scale-110"
+        aria-label="Abrir assistente Jovi">
+        <img src="images/desafios/Btn_Mascote.png" alt="Botão Mascote"
+            class="object-contain shrink-0  w-20 h-20 md:w-24 md:h-28">
+    </button>
+
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 h-16 flex items-center justify-around px-2 z-40 text-corpo">
+        <a href="inicio.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain mb-1">Início
+            </span>
+        </a>
+
+        <a href="dicas.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain mb-1">Dicas
+            </span>
+        </a>
+
+        <a href="#" id="btn-capturar" class="em-construcao relative -mt-8 flex flex-col items-center cursor-pointer text-center">
+            <span
+                class="w-14 h-14 rounded-full bg-banner border-4 border-white shadow-lg flex items-center justify-center">
+                <img src="./images/menu/Capturar.png" alt="Capturar" class="w-8 h-8 object-contain">
+            </span>
+            <span class="text-[10px] text-banner font-semibold mt-0.5">Capturar</span>
+        </a>
+
+        <a href="ranking.html"
+            class="flex flex-col items-center justify-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain mb-1">Ranking
+            </span>
+        </a>
+
+        <a href="perfil.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain mb-1">Perfil
+            </span>
+        </a>
+    </nav>
+
+    <script src="./js/desafios.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/alertas.js"></script>
+</body>
+
+</html>

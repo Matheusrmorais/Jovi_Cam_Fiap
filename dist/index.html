@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="[scrollbar-width:thin] [scrollbar-color:var(--color-banner)_var(--color-fundo)]">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOVI Cam - Autenticação</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-[#EEF2F9] min-h-screen font-inter flex flex-col justify-between">
+
+    <!-- Topo Azul / Header -->
+    <header class="bg-[#1453ED] w-full pt-12 pb-14 px-6 flex flex-col items-center text-center text-white shadow-md">
+        <div class="w-20 h-20 bg-white/25 rounded-full flex items-center justify-center shadow-inner mb-4">
+            <img src="./images/entrar_cadastro/Camera.png" alt="JOVI Cam" class="w-10 h-10 object-contain">
+        </div>
+
+        <h1 class="font-poller-one text-3xl font-bold tracking-wide">JOVI Cam</h1>
+        <p class="text-white/80 text-xs md:text-sm mt-1 font-medium">Capture, Evolua, Compartilhe.</p>
+    </header>
+
+    <!-- Conteúdo Principal / Formulário -->
+    <main class="w-full max-w-md mx-auto px-5 py-6 flex-1 flex flex-col gap-5">
+
+        <!-- Alternador Entrar / Cadastrar -->
+        <div class="bg-white rounded-2xl p-1.5 flex shadow-sm border border-gray-100">
+            <button id="btn-tab-entrar" type="button"
+                class="flex-1 py-3 bg-[#1453ED] text-white text-sm font-bold rounded-xl shadow-sm transition-all text-center cursor-pointer">
+                Entrar
+            </button>
+            <button id="btn-tab-cadastrar" type="button"
+                class="flex-1 py-3 text-[#94A3B8] text-sm font-semibold rounded-xl hover:text-[#1E293B] transition-all text-center cursor-pointer">
+                Cadastrar
+            </button>
+        </div>
+
+        <form id="auth-form" class="flex flex-col gap-4 mt-1">
+
+            <!-- Campo Nome (Visível apenas no cadastro) -->
+            <div id="campo-nome" class="hidden flex-col gap-1.5">
+                <label for="nome" class="text-[11px] font-bold tracking-wider text-[#64748B] uppercase">NOME
+                    COMPLETO</label>
+                <div class="relative flex items-center">
+                    <svg class="absolute left-4 w-5 h-5 text-gray-400 pointer-events-none" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                    <input type="text" id="nome" placeholder="Seu nome"
+                        class="w-full bg-white text-[#1E293B] placeholder-[#94A3B8] text-sm rounded-2xl pl-12 pr-4 py-3.5 shadow-sm border border-gray-100 focus:outline-none focus:border-[#1453ED] focus:ring-1 focus:ring-[#1453ED] transition-all">
+                </div>
+            </div>
+
+            <!-- Campo E-mail -->
+            <div class="flex flex-col gap-1.5">
+                <label for="email" class="text-[11px] font-bold tracking-wider text-[#64748B] uppercase">E-MAIL</label>
+                <div class="relative flex items-center">
+                    <img src="./images/entrar_cadastro/Email.png" alt="E-mail"
+                        class="absolute left-4 w-5 h-5 object-contain pointer-events-none opacity-60">
+                    <input type="email" id="email" placeholder="seu@email.com" required
+                        class="w-full bg-white text-[#1E293B] placeholder-[#94A3B8] text-sm rounded-2xl pl-12 pr-4 py-3.5 shadow-sm border border-gray-100 focus:outline-none focus:border-[#1453ED] focus:ring-1 focus:ring-[#1453ED] transition-all">
+                </div>
+            </div>
+
+            <!-- Campo Senha -->
+            <div class="flex flex-col gap-1.5">
+                <label for="senha" class="text-[11px] font-bold tracking-wider text-[#64748B] uppercase">SENHA</label>
+                <div class="relative flex items-center">
+                    <img src="./images/entrar_cadastro/Cadeado.png" alt="Senha"
+                        class="absolute left-4 w-5 h-5 object-contain pointer-events-none opacity-60">
+                    <input type="password" id="senha" placeholder="••••••••" required
+                        class="w-full bg-white text-[#1E293B] placeholder-[#94A3B8] text-sm rounded-2xl pl-12 pr-4 py-3.5 shadow-sm border border-gray-100 focus:outline-none focus:border-[#1453ED] focus:ring-1 focus:ring-[#1453ED] transition-all tracking-widest">
+                </div>
+            </div>
+
+            <!-- Campo Confirmar Senha (Visível apenas no cadastro) -->
+            <div id="campo-confirmar-senha" class="hidden flex-col gap-1.5">
+                <label for="confirmar-senha"
+                    class="text-[11px] font-bold tracking-wider text-[#64748B] uppercase">CONFIRMAR SENHA</label>
+                <div class="relative flex items-center">
+                    <img src="./images/entrar_cadastro/Cadeado.png" alt="Confirmar Senha"
+                        class="absolute left-4 w-5 h-5 object-contain pointer-events-none opacity-60">
+                    <input type="password" id="confirmar-senha" placeholder="••••••••"
+                        class="w-full bg-white text-[#1E293B] placeholder-[#94A3B8] text-sm rounded-2xl pl-12 pr-4 py-3.5 shadow-sm border border-gray-100 focus:outline-none focus:border-[#1453ED] focus:ring-1 focus:ring-[#1453ED] transition-all tracking-widest">
+                </div>
+            </div>
+
+            <!-- Link Esqueci Minha Senha -->
+            <div id="container-esqueci-senha" class="text-right -mt-1">
+                <a href="#" class="text-xs font-bold text-[#1453ED] hover:underline">Esqueci minha senha</a>
+            </div>
+
+            <!-- Botão de Ação Principal -->
+            <button id="btn-submit" type="submit"
+                class="w-full bg-[#1453ED] hover:bg-blue-700 text-white font-bold text-sm py-4 rounded-2xl shadow-md transition-colors mt-1 cursor-pointer">
+                Entrar
+            </button>
+        </form>
+
+        <!-- Card Informativo / Dica Lâmpada -->
+        <div class="bg-[#DBE6FE]/80 border border-[#BFDBFE] rounded-2xl p-3.5 flex items-start gap-3 mt-1">
+            <img src="./images/entrar_cadastro/Lampada.png" alt="Dica" class="w-5 h-5 object-contain shrink-0 mt-0.5">
+            <p class="text-xs text-[#1E293B] leading-snug">
+                Crie uma conta para <strong class="text-[#1453ED] font-bold">salvar seu progresso</strong>, completar
+                desafios e ganhar XP. Ou explore sem cadastro.
+            </p>
+        </div>
+
+        <!-- Divisor -->
+        <div class="relative flex py-2 items-center">
+            <div class="flex-grow border-t border-gray-300"></div>
+            <span class="shrink-0 mx-3 text-[11px] text-[#94A3B8] font-medium">prefiro explorar sem conta</span>
+            <div class="flex-grow border-t border-gray-300"></div>
+        </div>
+
+        <!-- Botão Continuar como Visitante -->
+        <button id="btn-visitante" type="button"
+            class="w-full bg-white border border-[#1453ED] text-[#1453ED] hover:bg-blue-50 font-bold text-sm py-3.5 rounded-2xl transition-colors flex items-center justify-center gap-1 shadow-sm cursor-pointer">
+            Continuar como visitante &rarr;
+        </button>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="w-full text-center pb-8 pt-2">
+        <p id="texto-rodape" class="text-xs text-[#94A3B8]">
+            Não tem conta? <a href="#" id="link-troca-modo" class="text-[#1453ED] font-bold hover:underline">Criar
+                agora</a>
+        </p>
+    </footer>
+
+    <!-- Script de Autenticação -->
+    <script src="./js/entrar_cadastrar.js"></script>
+</body>
+
+</html>

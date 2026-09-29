@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascote</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="h-screen flex flex-col font-inter">
+    <header class="bg-banner p-4 text-white">
+
+    <section>
+
+        <div class="flex gap-4 items-center ">
+            <button id="voltar" class="p-1 text-white cursor-pointer" aria-label="Voltar">
+                <img src="./images/menu/Voltar.png" alt="Voltar" class="w-20 h-20 md:w-12 md:h-12 object-contain shrink-0">
+            </button>
+            <img src="./images/mascote/Mascote.png" alt="Mascote" class="shrink-0 object-contain w-12 h-12">
+            <div>
+                <h1 class="font-poller-one"> Mascote </h1>
+                <p> Acompanhe seu mascote crescer e se desenvolver junto com você!</p>
+
+            </div>
+        </div>
+
+        <div class="flex gap-6 bg-white/20 rounded-xl mt-4 p-3">
+            
+            <img src="./images/mascote/Raio.png" alt="Raio" class="object-contain shrink-0">
+
+            <div class="flex flex-col flex-1 gap-2">
+                <p class="text-xs">Nível <span class="txt-nivel">5</span> <strong id="texto-xp"> · 620 / 1000 XP </strong>  para o próximo</p>
+
+                <div id="fundo-barra" class="w-full h-2 bg-white/30 rounded-full"> 
+                    <div id="fill-xp" class="h-full bg-white rounded-full w-[62%]">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="text-center">
+                <p  class="text-2xl font-bold leading-none txt-nivel">5</p>
+                <p class="text-[10px]">nível</p>
+            </div>
+
+        </div>
+
+    </section>  
+
+    </header>
+
+    <main id="tela-principal" class="flex flex-1 bg-cover bg-bottom bg-[url('../images/mascote/Bg_Estudio_Fotografico.png')] transition-all duration-500 relative">
+        <section class="absolute top-0 w-full flex justify-between p-6">
+
+            <div class="bg-[#E2C69F] px-4 py-1.5 rounded-full font-bold text-[#552712] shadow-md border-2 border-[#947F62] ">
+                <p>Nível <span  class="txt-nivel">5</span></p>
+            </div>
+
+            <div class="bg-[#E2C69F] px-4 py-1.5 rounded-full font-bold text-[#552712] shadow-md border-2 border-[#947F62] flex  gap-2">
+                <img src="./images/mascote/Moeda.png" alt="Moedas" class="w-5 h-5 shrink-0 object-contain">
+                <p id="texto-moedas">100</p>
+            </div>
+
+            
+        </section>
+        
+        <div class="absolute z-20 flex flex-col items-center right-7 bottom-33 md:right-auto md:bottom-48 md:left-[65%] md:translate-x-0">
+
+            <button id="btn-acao" class="relative flex items-center justify-center bg-[#E2C69F] border-4 border-[#947F62] rounded-full shadow-lg cursor-pointer transition-transform hover:scale-105 active:scale-95 w-16 h-16 md:w-24 md:h-24 overflow-hidden">
+
+                <div id="fill-acao" class="absolute bottom-0 w-full h-0 bg-[#50BE35]/80 transition-all ease-linear"></div>
+
+                <img id="icon-acao" src="./images/mascote/Diversao.png" alt="Ação" class="relative z-10 w-10 h-10 md:w-14 md:h-14 object-contain">
+            </button>
+
+            <div class="mt-1 bg-[#E2C69F] border-2 border-[#947F62] px-2 py-0.5 rounded-full shadow-md flex items-center gap-1">
+                <span class="text-[10px] font-bold text-[#552712]">-3</span>
+                <img src="./images/mascote/Moeda.png" alt="Moedas" class="w-3 h-3 object-contain">
+            </div>
+
+        </div>
+
+        <img id="imagem-mascote" src="./images/mascote/Mascote_Feliz.png" alt="Mascote Jovi" class="absolute bottom-10 left-1/2 -translate-x-1/2 w-56 object-contain shrink-0 z-10">
+
+    </main>
+
+    <nav class="absolute left-7 md:left-9 flex flex-col gap-4 top-1/2 -translate-y-1/4">
+
+        <div class="hidden bg-green-500 bg-yellow-400 bg-red-500"></div>
+
+            <div id="btn-diversao" class="relative w-14 h-14 bg-gray-50/20 rounded-xl border-2 border-black overflow-hidden shadow-md">
+            
+            <div id="fill-diversao" class="absolute bottom-0 w-full h-0 transition-all duration-300"></div>
+        
+            <img src="./images/mascote/Diversao.png" alt="Diversao" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 z-10 object-contain">
+        </div>
+
+        <div id="btn-fome" class="relative w-14 h-14 bg-gray-50/20 rounded-xl border-2 border-black overflow-hidden shadow-md">
+        
+            <div id="fill-fome" class="absolute bottom-0 w-full h-0 transition-all duration-300"></div>
+        
+            <img src="./images/mascote/Fome.png" alt="Fome" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 z-10 object-contain">
+        </div>
+
+        <div id="btn-higiene" class="relative w-14 h-14 bg-gray-50/20 rounded-xl border-2 border-black overflow-hidden shadow-md">
+        
+            <div id="fill-higiene" class="absolute bottom-0 w-full h-0 transition-all duration-300"></div>
+        
+            <img src="./images/mascote/Higiene.png" alt="Higiene" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 z-10 object-contain">
+        </div>
+
+        <div id="btn-sono" class="relative w-14 h-14 bg-gray-50/20 rounded-xl border-2 border-black overflow-hidden shadow-md">
+            
+            <div id="fill-sono" class="absolute bottom-0 w-full h-0 transition-all duration-300"></div>
+            
+            <img src="./images/mascote/Sono.png" alt="Sono" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 z-10 object-contain">
+        </div>
+
+</nav>
+
+    <nav class="absolute right-7 md:right-9 flex flex-col gap-8 top-1/2 -translate-y-1/4 bg-[#E2C69F]/70 border-2 border-[#947F62] rounded-full p-4">
+        <button id="btn-loja" class="cursor-pointer">
+            <img src="images/mascote/Loja.png" alt="Loja" class="shrink-0 object-contain md:border-2 md:border-transparent md:p-1 md:rounded-full md:hover:bg-[#E2C69F]/30  md:hover:border-[#947F62]">
+        </button>
+        <button id="btn-personalizar" class="cursor-pointer">
+            <img src="./images/mascote/Personalizar.png" alt="Personalizar" class="shrink-0 object-contain md:border-2 md:border-transparent md:p-1 md:rounded-full md:hover:bg-[#E2C69F]/30  md:hover:border-[#947F62]">
+        </button>
+        <button id="btn-guardaroupa" class="cursor-pointer">
+            <img src="./images/mascote/Guarda_Roupa.png" alt="Guarda-roupa" class="shrink-0 object-contain md:border-2 md:border-transparent md:p-1 md:rounded-full md:hover:bg-[#E2C69F]/30  md:hover:border-[#947F62]">
+        </button>
+        <button id="btn-ajuda" class="cursor-pointer">
+            <img src="./images/mascote/Ajuda.png" alt="Ajuda" class="shrink-0 object-contain md:border-2 md:border-transparent md:p-1 md:rounded-full md:hover:bg-[#E2C69F]/30  md:hover:border-[#947F62]">
+        </button>
+    </nav>
+
+    <nav class="absolute z-20 bottom-10 left-1/2 -translate-x-1/2 w-max flex justify-center items-center gap-4 sm:gap-6 bg-[#E2C69F]/70 border-2 border-[#947F62] rounded-full px-6 py-2">
+
+    <button id="nav-estudio" class="relative shrink-0 flex flex-col items-center justify-center cursor-pointer -translate-y-5 transition-transform duration-300">
+        <div id="box-estudio" class="bg-white p-2 rounded-xl border border-gray-300 shadow-sm transition-all duration-300">
+            <img src="./images/mascote/Estudio_Fotografico.png" alt="Estúdio Fotográfico" class="w-8 h-8 object-contain transition-opacity duration-300">
+        </div>
+        
+        <span id="texto-estudio" class="absolute -bottom-7 text-[10px] text-gray-800 font-bold leading-tight text-center whitespace-nowrap">Estúdio<br>Fotográfico</span>
+    </button>
+
+    <button id="nav-cozinha" class="relative shrink-0 flex flex-col items-center justify-center cursor-pointer group transition-transform duration-300 hover:-translate-y-5">
+    
+        <div id="box-cozinha" class="p-2 rounded-xl border border-transparent group-hover:bg-white group-hover:border-gray-300 group-hover:shadow-sm transition-all duration-300">
+            <img src="./images/mascote/Cozinha.png" alt="Cozinha" class="w-8 h-8 object-contain">
+        </div>
+        <span id="texto-cozinha" class="absolute -bottom-5 text-[10px] text-gray-800 font-bold leading-tight text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">Cozinha</span>
+    </button>
+
+    <button id="nav-banheiro" class="relative shrink-0 flex flex-col items-center justify-center cursor-pointer group transition-transform duration-300 hover:-translate-y-5">
+        <div id="box-banheiro" class="p-2 rounded-xl border border-transparent group-hover:bg-white group-hover:border-gray-300 group-hover:shadow-sm transition-all duration-300">
+            <img src="./images/mascote/Banheiro.png" alt="Banheiro" class="w-8 h-8 object-contain">
+        </div>
+        <span id="texto-banheiro" class="absolute -bottom-5 text-[10px] text-gray-800 font-bold leading-tight text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">Banheiro</span>
+    </button>
+
+    <button id="nav-quarto" class="relative shrink-0 flex flex-col items-center justify-center cursor-pointer group transition-transform duration-300 hover:-translate-y-5">
+        <div id="box-quarto" class="p-2 rounded-xl border border-transparent group-hover:bg-white group-hover:border-gray-300 group-hover:shadow-sm transition-all duration-300">
+            <img src="./images/mascote/Quarto.png" alt="Quarto" class="w-8 h-8 object-contain">
+        </div>
+        <span id="texto-quarto" class="absolute -bottom-5 text-[10px] text-gray-800 font-bold leading-tight text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">Quarto</span>
+    </button>
+
+</nav>
+
+    <script src="./js/mascote.js"></script> 
+</body>
+</html>

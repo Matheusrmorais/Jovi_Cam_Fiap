@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+    class="[scrollbar-width:thin] [scrollbar-color:var(--color-banner)_var(--color-fundo)] [&::-webkit-scrollbar]:w-3 [&::-webkit-scrollbar-track]:bg-fundo [&::-webkit-scrollbar-thumb]:bg-banner [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border-[3px] [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-fundo [&::-webkit-scrollbar-thumb:hover]:bg-hover">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-[#F4F6F9] min-h-screen relative pb-28 font-inter overflow-x-hidden">
+
+    <!-- Overlay Escuro (Fundo do menu) -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity duration-300 opacity-0">
+    </div>
+
+    <!-- Menu Lateral (Sidebar) -->
+    <aside id="sidebar-menu"
+        class="fixed top-0 left-0 h-full w-[85%] max-w-sm bg-[#1A55FF] z-[70] transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col font-inter">
+
+        <!-- Cabeçalho do Menu -->
+        <div class="flex items-center justify-between p-6">
+            <h2 class="font-poller-one font-bold text-[24px] text-white">JOVI Cam</h2>
+            <button id="close-menu" class="text-white opacity-80 hover:opacity-100 cursor-pointer p-2"
+                aria-label="Fechar menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Lista de Links -->
+        <nav class="flex flex-col gap-6 px-6 mt-4 overflow-y-auto pb-4">
+            <a href="inicio.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain"> Início
+            </a>
+
+            <a href="dicas.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain"> Dicas
+            </a>
+
+            <a href="templates.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Quadro.png" alt="Templates" class="w-6 h-6 object-contain"> Templantes
+            </a>
+
+            <a href="apresentacao_camera.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Capturar.png" alt="Câmera JOVI" class="w-6 h-6 object-contain"> Câmera JOVI
+            </a>
+
+            <a href="ranking.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain"> Ranking
+            </a>
+
+            <a href="assistente_virtual.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Assistente_Virtual.png" alt="Assistente Virtual" class="w-6 h-6 object-contain">
+                Assistente Virtual
+            </a>
+
+            <a href="desafios.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Desafio.png" alt="Desafios" class="w-6 h-6 object-contain"> Desafios
+            </a>
+
+            <a href="perfil.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain"> Perfil
+            </a>
+        </nav>
+
+        <!-- Botão Entrar ou Criar Conta -->
+        <div class="mt-auto p-6 mb-4">
+            <button
+                class="em-construcao w-full bg-white text-[#1A55FF] font-bold py-3.5 rounded-xl hover:bg-gray-100 transition-colors shadow-lg cursor-pointer text-[15px]">
+                Entrar ou criar conta
+            </button>
+        </div>
+    </aside>
+
+    <header class="bg-[#1A56F0] pt-10 pb-8 px-6 flex flex-col items-center text-white relative rounded-b-2xl shadow-sm">
+
+        <button id="menu" class="absolute top-6 left-6 p-2 text-white cursor-pointer hover:bg-white/30 transition rounded-lg"
+            aria-label="Abrir menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+
+        <div class="relative mt-2">
+            <img src="./images/perfil/Foto_Perfil.png" alt="Fernando"
+                class="w-[104px] h-[104px] rounded-full border-4 border-[#5B8DEF] object-cover bg-[#9CB8F5] shadow-lg">
+
+            <div class="absolute bottom-2 right-2 w-5 h-5 bg-[#00FF00] border-2 border-[#1A56F0] rounded-full"></div>
+        </div>
+
+        <h1 class="font-extrabold text-[32px] text-white mt-4 tracking-wide font-poller-one text-center">Fernando</h1>
+        <p class="text-[#9CB8F5] text-[15px] mt-0.5">@fernando . desde jan/2025</p>
+
+
+        <div
+            class="w-full max-w-md bg-white/20 rounded-xl mt-6 p-4 flex items-center shadow-inner border border-white/10 backdrop-blur-sm">
+            <img src="./images/perfil/Raio.png" alt="Raio" class="w-6 h-6 object-contain shrink-0">
+            <div class="flex flex-col flex-1 mx-3 gap-1.5">
+                <p class="text-[12px] text-white/90">Nível <span class="font-bold">5</span> <strong class="font-bold"> ·
+                        620 / 1000 XP</strong> para o próximo</p>
+                <div class="w-full h-[6px] bg-black/20 rounded-full overflow-hidden">
+                    <div class="h-full bg-white rounded-full w-[62%] shadow-[0_0_8px_rgba(255,255,255,0.8)]"></div>
+                </div>
+            </div>
+            <div class="text-center shrink-0 flex flex-col items-center ml-2">
+                <p class="text-[26px] font-bold leading-none text-white">5</p>
+                <p class="text-[10px] mt-1 text-white/80 tracking-wider">nível</p>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="px-5 md:px-6 pt-6 pb-24 max-w-lg mx-auto w-full flex flex-col gap-8 relative z-10">
+
+        <section
+            class="bg-white rounded-3xl shadow-[0_4px_20px_rgb(0,0,0,0.05)] py-6 px-2 flex justify-between divide-x divide-gray-100">
+            <div class="flex flex-col items-center flex-1">
+                <span class="font-black text-[#1A56F0] text-[34px] leading-none">47</span>
+                <span class="text-slate-500 text-[12px] font-bold mt-1.5 tracking-wider">FOTOS</span>
+            </div>
+            <div class="flex flex-col items-center flex-1">
+                <span class="font-black text-[#1A56F0] text-[34px] leading-none">12</span>
+                <span class="text-slate-500 text-[12px] font-bold mt-1.5 tracking-wider">DESAFIOS</span>
+            </div>
+            <div class="flex flex-col items-center flex-1">
+                <span class="font-black text-[#EAB308] text-[34px] leading-none">#12</span>
+                <span class="text-slate-500 text-[12px] font-bold mt-1.5 tracking-wider">RANKING</span>
+            </div>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <div class="flex justify-between items-end">
+                <h2 class="font-bold text-[#1E293B] text-[15px]">CONQUISTAS</h2>
+                <button class="em-construcao text-[#1A56F0] text-[14px] font-bold cursor-pointer hover:underline">Ver todas</button>
+            </div>
+
+            <div class="flex gap-4 overflow-x-auto pb-3 scrollbar-hide">
+                <div class="flex flex-col items-center gap-2 shrink-0">
+                    <div
+                        class="bg-white rounded-[20px] shadow-sm p-2 w-[76px] h-[76px] flex items-center justify-center border border-gray-50">
+                        <img src="./images/perfil/Fotografo.png" alt="Fotógrafo" class="w-12 h-12 object-contain">
+                    </div>
+                    <span class="text-[12px] font-semibold text-slate-500">Fotógrafo</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 shrink-0">
+                    <div
+                        class="bg-[#E0E7FF]/50 rounded-[20px] shadow-sm p-2 w-[76px] h-[76px] flex items-center justify-center border border-indigo-50">
+                        <img src="./images/perfil/Explorador.png" alt="Explorador" class="w-12 h-12 object-contain">
+                    </div>
+                    <span class="text-[12px] font-semibold text-slate-500">Explorador</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 shrink-0">
+                    <div
+                        class="bg-white rounded-[20px] shadow-sm p-2 w-[76px] h-[76px] flex items-center justify-center border border-gray-50">
+                        <img src="./images/perfil/Top_Rated.png" alt="Top Rated"
+                            class="w-12 h-12 object-contain drop-shadow-sm">
+                    </div>
+                    <span class="text-[12px] font-semibold text-slate-500">Top Rated</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 shrink-0">
+                    <div
+                        class="bg-[#FEE2E2]/50 rounded-[20px] shadow-sm p-2 w-[76px] h-[76px] flex items-center justify-center border border-red-50">
+                        <img src="./images/perfil/Pontual.png" alt="Pontual" class="w-10 h-10 object-contain">
+                    </div>
+                    <span class="text-[12px] font-semibold text-slate-500">Pontual</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 shrink-0">
+                    <div
+                        class="em-construcao cursor-pointer hover:bg-gray-100 transition-colors bg-white rounded-[20px] shadow-sm p-2 w-[76px] h-[76px] flex items-center justify-center border border-gray-50 text-slate-400 font-black text-2xl">
+                        +8
+                    </div>
+                    <span class="text-[12px] font-semibold text-slate-500">mais</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <div class="flex justify-between items-end">
+                <h2 class="font-bold text-[#1E293B] text-[15px]">ATIVIDADE RECENTE</h2>
+                <button class="em-construcao text-[#1A56F0] text-[14px] font-bold cursor-pointer hover:underline">Histórico</button>
+            </div>
+
+            <div class="flex flex-col gap-3">
+                <div class="bg-white rounded-[20px] shadow-sm p-4 flex items-center gap-4 border border-gray-100">
+                    <div class="shrink-0 w-12 h-12 flex items-center justify-center">
+                        <img src="./images/perfil/Desafio.png" alt="Fogo" class="w-9 h-9 object-contain">
+                    </div>
+                    <div class="flex flex-col flex-1">
+                        <span class="text-[15px] font-bold text-[#1E293B]">Desafio concluído</span>
+                        <span class="text-[13px] text-slate-400 mt-0.5">Luz natural pela manhã</span>
+                    </div>
+                    <div class="flex flex-col items-end shrink-0">
+                        <span class="text-[16px] font-black text-[#16A34A]">+50 XP</span>
+                        <span class="text-[11px] text-slate-400 mt-0.5">hoje</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[20px] shadow-sm p-4 flex items-center gap-4 border border-gray-100">
+                    <div class="shrink-0 w-12 h-12 flex items-center justify-center">
+                        <img src="./images/perfil/Top_Rated.png" alt="Estrela"
+                            class="w-9 h-9 object-contain drop-shadow-sm">
+                    </div>
+                    <div class="flex flex-col flex-1">
+                        <span class="text-[15px] font-bold text-[#1E293B]">Avaliação recebida</span>
+                        <span class="text-[13px] text-slate-400 mt-0.5">5 estrelas no último post</span>
+                    </div>
+                    <div class="flex flex-col items-end shrink-0">
+                        <span class="text-[16px] font-black text-[#16A34A]">+10 XP</span>
+                        <span class="text-[11px] text-slate-400 mt-0.5">ontem</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 h-16 flex items-center justify-around px-2 z-40 text-corpo">
+        <a href="inicio.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain mb-1">Início
+            </span>
+        </a>
+
+        <a href="dicas.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain mb-1">Dicas
+            </span>
+        </a>
+
+        <a href="#" id="btn-capturar" class="em-construcao relative -mt-8 flex flex-col items-center cursor-pointer text-center">
+            <span
+                class="w-14 h-14 rounded-full bg-banner border-4 border-white shadow-lg flex items-center justify-center">
+                <img src="./images/menu/Capturar.png" alt="Capturar" class="w-8 h-8 object-contain">
+            </span>
+            <span class="text-[10px] text-banner font-semibold mt-0.5">Capturar</span>
+        </a>
+
+        <a href="ranking.html"
+            class="flex flex-col items-center justify-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain mb-1">Ranking
+            </span>
+        </a>
+
+        <a href="perfil.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain mb-1">Perfil
+            </span>
+        </a>
+    </nav>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/alertas.js"></script>
+
+</body>
+
+</html>

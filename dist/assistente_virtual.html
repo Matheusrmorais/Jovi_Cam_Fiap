@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+    class="[scrollbar-width:thin] [scrollbar-color:var(--color-banner)_var(--color-fundo)] [&::-webkit-scrollbar]:w-3 [&::-webkit-scrollbar-track]:bg-fundo [&::-webkit-scrollbar-thumb]:bg-banner [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border-[3px] [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-fundo [&::-webkit-scrollbar-thumb:hover]:bg-hover">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente Virtual</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-fundo min-h-screen relative pb-24 font-inter">
+
+
+    <aside id="sidebar-menu"
+        class="fixed top-0 left-0 h-full w-[85%] max-w-sm bg-[#1A55FF] z-[70] transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col font-inter">
+
+        <!-- Cabeçalho do Menu -->
+        <div class="flex items-center justify-between p-6">
+            <h2 class="font-poller-one font-bold text-[24px] text-white">JOVI Cam</h2>
+            <button id="close-menu" class="text-white opacity-80 hover:opacity-100 cursor-pointer p-2"
+                aria-label="Fechar menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Lista de Links -->
+        <nav class="flex flex-col gap-6 px-6 mt-4 overflow-y-auto pb-4">
+            <a href="inicio.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain"> Início
+            </a>
+
+            <a href="dicas.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain"> Dicas
+            </a>
+
+            <a href="templates.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Quadro.png" alt="Templates" class="w-6 h-6 object-contain"> Templantes
+            </a>
+
+            <a href="apresentacao_camera.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Capturar.png" alt="Câmera JOVI" class="w-6 h-6 object-contain"> Câmera JOVI
+            </a>
+
+            <a href="ranking.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain"> Ranking
+            </a>
+
+            <a href="assistente_virtual.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Assistente_Virtual.png" alt="Assistente Virtual" class="w-6 h-6 object-contain">
+                Assistente Virtual
+            </a>
+
+            <a href="desafios.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Desafio.png" alt="Desafios" class="w-6 h-6 object-contain"> Desafios
+            </a>
+
+            <a href="perfil.html"
+                class="flex items-center gap-4 text-white font-bold text-[16px] hover:opacity-80 transition-opacity">
+                <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain"> Perfil
+            </a>
+        </nav>
+
+
+        <div class="mt-auto p-6 mb-4">
+            <button
+                class="w-full bg-white text-[#1A55FF] font-bold py-3.5 rounded-xl hover:bg-gray-100 transition-colors shadow-lg cursor-pointer text-[15px]">
+                Entrar ou criar conta
+            </button>
+        </div>
+    </aside>
+
+    <header class="top-0 left-0 right-0 bg-banner p-6 flex flex-col text-white">
+        <div class="flex gap-4 items-center">
+            <button id="menu" class="p-1 text-white cursor-pointer" aria-label="Abrir menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <img src="./images/assistente_virtual/Assistente_Virtual.png" alt="Ícone Assistente VIrtual"
+                class="object-contain shrink w-12 h-12">
+            <div>
+
+                <h1 class="font-poller-one font-bold text-[20px] text-white">Assistente Virtual</h1>
+                <p class="text-xs">Sua mentora de fotografia</p>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="em-construcao px-4 md:px-6 pb-24">
+
+        <section
+            class="bg-white shadow-md rounded-[24px] p-5 md:p-6 relative z-10 -mt-4 mx-auto w-full md:max-w-4xl flex flex-col gap-5 md:gap-6">
+
+            <div class="flex gap-4 md:gap-10 items-center">
+                <div class="shrink-0 flex items-center justify-center">
+                    <img src="./images/assistente_virtual/Assistente_Virtual.png" alt="Imagem Assistente Virtual"
+                        class="object-cover w-32 h-32 md:w-44 md:h-44 rounded-2xl">
+                </div>
+
+                <div class="flex flex-col gap-3 flex-1 min-w-0 items-center gap-5 md:gap-6">
+
+                    <div class="flex flex-col gap-3 flex-1 min-w-0 items-center">
+
+                        <div>
+                            <h3 class="font-bold text-[#1E293B] text-[18px] md:text-[22px] leading-tight">Olá! Eu
+                                sou a
+                                JôIA 👋🏻</h3>
+                            <p class="text-[#64748B] text-sm leading-snug">Sua guia no mundo da fotografia 📸 Pode
+                                me
+                                perguntar sobre técnicas, composição, luz, câmeras e edição, estou aqui pra te
+                                ajudar a
+                                evoluir a cada clique!</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            </div>
+
+
+        </section>
+
+
+        <section class="w-full">
+            <h2 class="font-bold text-titulo text-base mb-4 px-1">Sugestões para você</h2>
+            <div class="flex gap-1 overflow-x-auto pb-4 w-full no-scrollbar snap-x px-1">
+                <button
+                    class="bg-white border border-[#E2E8F0] rounded-2xl shadow-sm p-4 flex flex-col gap-3 items-center justify-center text-center shrink-0 w-36 h-28 cursor-pointer hover:bg-[#ECEFF8] hover:border-banner transition-colors snap-start">
+
+                    <span class="font-semibold text-titulo text-sm leading-snug">Como melhorar minhas fotos?</span>
+                </button>
+                <button
+                    class="bg-white border border-[#E2E8F0] rounded-2xl shadow-sm p-4 flex items-center justify-center text-center shrink-0 w-36 h-28 cursor-pointer hover:bg-[#ECEFF8] hover:border-banner transition-colors snap-start">
+                    <span class="font-semibold text-titulo text-sm leading-snug">Qual lente usar em cada
+                        situação?</span>
+                </button>
+                <button
+                    class="bg-white border border-[#E2E8F0] rounded-2xl shadow-sm p-4 flex items-center justify-center text-center shrink-0 w-36 h-28 cursor-pointer hover:bg-[#ECEFF8] hover:border-banner transition-colors snap-start">
+                    <span class="font-semibold text-titulo text-sm leading-snug">Como aproveitar melhor a
+                        luz?</span>
+                </button>
+                <button
+                    class="bg-white border border-[#E2E8F0] rounded-2xl shadow-sm p-4 flex items-center justify-center text-center shrink-0 w-36 h-28 cursor-pointer hover:bg-[#ECEFF8] hover:border-banner transition-colors snap-start">
+                    <span class="font-semibold text-titulo text-sm leading-snug">Dicas de composição</span>
+                </button>
+            </div>
+        </section>
+
+        <section
+            class="flex flex-col gap-5 w-full bg-[#F8FAFC] rounded-3xl p-4 md:p-6 shadow-inner border border-gray-100">
+
+            <div
+                class="self-end bg-banner text-white rounded-[20px] rounded-tr-sm px-5 py-3 max-w-[85%] md:max-w-[70%] shadow-sm text-sm">
+                O que posso mudar nessa foto?
+            </div>
+
+            <div class="self-start flex gap-3 w-full max-w-[95%] md:max-w-[80%]">
+                <img src="./images/assistente_virtual/Assistente_Virtual.png" alt="JôIA"
+                    class="w-10 h-10 rounded-full shrink-0 shadow-sm object-cover bg-white border border-gray-200">
+                <div
+                    class="bg-white rounded-[20px] rounded-tl-sm px-5 py-4 shadow-sm border border-gray-200 text-sm text-corpo flex-1">
+                    <p class="mb-4 text-titulo font-medium">Ótima foto! Ela tem muito potencial. Aqui estão alguns
+                        pontos que você pode melhorar:</p>
+
+                    <div class="flex flex-col gap-4 mb-4">
+                        <div>
+                            <span class="font-bold text-banner block mb-1">Luz</span>
+                            <p class="leading-relaxed">A luz está bonita, mas o sol está muito centralizado. Tente
+                                posicioná-lo em um dos terços da imagem.</p>
+                        </div>
+                        <div>
+                            <span class="font-bold text-banner block mb-1">Composição</span>
+                            <p class="leading-relaxed">O píer cria linhas guias ótimas! Experimente enquadrar um
+                                pouco mais à direita para dar mais respiro ao lado esquerdo.</p>
+                        </div>
+                        <div>
+                            <span class="font-bold text-banner block mb-1">Cores</span>
+                            <p class="leading-relaxed">As cores estão boas, mas você pode aumentar um pouco o
+                                contraste e a saturação na edição para destacar mais o céu.</p>
+                        </div>
+                        <div>
+                            <span class="font-bold text-banner block mb-1">Exposição</span>
+                            <p class="leading-relaxed">As áreas escuras do píer estão um pouco subexpostas. Levante
+                                levemente as sombras na edição.</p>
+                        </div>
+                    </div>
+
+                    <p class="font-semibold text-titulo">Faça pequenos ajustes nesses pontos e sua foto vai ficar
+                        ainda mais incrível!</p>
+                </div>
+            </div>
+
+            <div
+                class="self-end bg-banner text-white rounded-[20px] rounded-tr-sm px-5 py-3 max-w-[85%] md:max-w-[70%] shadow-sm text-sm mt-2">
+                Perfeito! Obrigado pelas dicas, Jô!
+            </div>
+        </section>
+
+        <section class="w-full mt-2">
+            <div class="flex gap-3 overflow-x-auto w-full no-scrollbar px-1 py-2">
+                <button
+                    class="bg-white border-[1.5px] border-banner text-banner px-5 py-2.5 rounded-full shrink-0 text-sm font-semibold shadow-sm hover:bg-[#ECEFF8] transition cursor-pointer">
+                    Explicar técnica
+                </button>
+                <button
+                    class="bg-white border-[1.5px] border-banner text-banner px-5 py-2.5 rounded-full shrink-0 text-sm font-semibold shadow-sm hover:bg-[#ECEFF8] transition cursor-pointer">
+                    Recomendar câmera
+                </button>
+                <button
+                    class="bg-white border-[1.5px] border-banner text-banner px-5 py-2.5 rounded-full shrink-0 text-sm font-semibold shadow-sm hover:bg-[#ECEFF8] transition cursor-pointer">
+                    Dicas de edição
+                </button>
+            </div>
+        </section>
+
+        <section class="w-full mt-2 mb-6">
+            <div class="bg-white border border-gray-300 rounded-full p-2 flex gap-3 items-center shadow-sm w-full">
+                <button class="p-2 text-gray-400 hover:text-banner cursor-pointer shrink-0 transition-colors">
+                    <img src="images/assistente_virtual/Mais.png" alt="Botão mais opções"
+                        class="shrink-0 object-contain">
+                </button>
+                <input type="text" placeholder="Pergunte algo à JôIA..."
+                    class="flex-1 bg-transparent text-sm text-titulo focus:outline-none placeholder:text-gray-400">
+                <button
+                    class="bg-banner w-10 h-10 rounded-full flex items-center justify-center text-white shrink-0 shadow-md hover:bg-blue-700 transition cursor-pointer">
+                    <img src="images/assistente_virtual/Enviar.png" alt="Botão enviar" class="shrink-0 object-contain">
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 h-16 flex items-center justify-around px-2 z-40 text-corpo">
+        <a href="inicio.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Inicio.png" alt="Início" class="w-6 h-6 object-contain mb-1">Início
+            </span>
+        </a>
+
+        <a href="dicas.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Guia_Dicas.png" alt="Dicas" class="w-6 h-6 object-contain mb-1">Dicas
+            </span>
+        </a>
+
+        <a href="#" id="btn-capturar" class="relative -mt-8 flex flex-col items-center cursor-pointer text-center">
+            <span
+                class="w-14 h-14 rounded-full bg-banner border-4 border-white shadow-lg flex items-center justify-center">
+                <img src="./images/menu/Capturar.png" alt="Capturar" class="w-8 h-8 object-contain">
+            </span>
+            <span class="text-[10px] text-banner font-semibold mt-0.5">Capturar</span>
+        </a>
+
+        <a href="ranking.html"
+            class="flex flex-col items-center justify-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Ranking.png" alt="Ranking" class="w-6 h-6 object-contain mb-1">Ranking
+            </span>
+        </a>
+
+        <a href="perfil.html" class="flex flex-col items-center text-[10px] gap-0.5 cursor-pointer text-center">
+            <span
+                class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                <img src="./images/menu/Perfil.png" alt="Perfil" class="w-6 h-6 object-contain mb-1">Perfil
+            </span>
+        </a>
+    </nav>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/alertas.js"></script>
+</body>
+
+</html>

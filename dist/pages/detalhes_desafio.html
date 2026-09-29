@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="
+    [scrollbar-width:thin] 
+    [scrollbar-color:var(--color-banner)_var(--color-fundo)] 
+    [&::-webkit-scrollbar]:w-3 
+    [&::-webkit-scrollbar-track]:bg-fundo 
+    [&::-webkit-scrollbar-thumb]:bg-banner 
+    [&::-webkit-scrollbar-thumb]:rounded-full 
+    [&::-webkit-scrollbar-thumb]:border-[3px] 
+    [&::-webkit-scrollbar-thumb]:border-solid 
+    [&::-webkit-scrollbar-thumb]:border-fundo 
+    [&::-webkit-scrollbar-thumb:hover]:bg-hover
+">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo-pagina">Desafios</title>
+
+    <!-- CORREÇÃO 1: Adicionado o ../ no CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="bg-fundo">
+    <header class="fixed top-0 left-0 right-0 bg-banner p-6 flex items-center">
+
+        <section class="flex items-center gap-4">
+
+            <button id="voltar" class="p-1 text-white cursor-pointer" aria-label="Voltar">
+                <img src="../images/menu/Voltar.png" alt="Voltar" class="w-10 h-10 object-contain shrink-0">
+            </button>
+
+            <img id="icone-header" src="../images/desafios/Iniciante.png" alt="Ícone"
+                class="w-10 h-10 object-contain shrink-0">
+
+            <h1 id="titulo-header" class="font-poller-one font-bold text-50px text-white">Câmera JOVI</h1>
+
+        </section>
+
+    </header>
+
+    <main class="font-inter p-6 pt-32 pb-24">
+
+
+        <section class="mt-8 flex flex-col gap-4">
+
+            <div class="flex flex-col md:flex-row gap-4 w-full">
+
+                <div id="box-card"
+                    class="border rounded-[20px] shadow-sm flex flex-col items-center text-center p-4 w-full md:flex-1">
+                    <img id="icon-card" src="../images/desafios/Iniciante_Verde.png" alt="Ícone"
+                        class="w-10 h-10 mb-2 object-contain">
+                    <h3 id="missao-card" class=" font-bold text-sm"></h3>
+                    <p id="texto-card" class="text-[10px] text-corpo leading-tight mt-1 mb-4 px-1"></p>
+
+
+                    <button id="btn-enviar-foto"
+                        class="em-construcao w-full flex justify-center items-center gap-2 bg-banner text-white rounded-xl py-3 text-sm font-semibold hover:bg-blue-700 transition-colors cursor-pointer">
+                        <img src="../images/desafios/Baixar.png" alt="" class="w-4 h-4 object-contain">
+                        Enviar foto
+                    </button>
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+
+        <nav
+            class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 h-[72px] flex items-center justify-around px-2 z-50 text-corpo shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+            <button id="inicio" class="flex flex-col items-center text-[10px] gap-1 cursor-pointer">
+                <span
+                    class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                    <img src="../images/menu/Inicio.png" alt="" class="w-6 h-6 object-contain">Inicio
+                </span>
+            </button>
+
+            <button id="dicas" class="flex flex-col items-center text-[10px] gap-1 cursor-pointer">
+                <span
+                    class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                    <img src="../images/menu/Dicas.png" alt="" class="w-6 h-6 object-contain">Dicas
+                </span>
+            </button>
+
+            <button id="capturar" class="relative -mt-6 flex flex-col items-center cursor-pointer">
+                <span
+                    class="w-14 h-14 rounded-full bg-banner border-4 border-white shadow-lg flex items-center justify-center">
+                    <img src="../images/menu/Capturar.png" alt="" class="w-6 h-6 object-contain">
+                </span>
+                <span class="text-[10px] text-banner font-semibold mt-1">Capturar</span>
+            </button>
+
+            <button id="ranking" class="flex flex-col items-center text-[10px] gap-1 cursor-pointer">
+                <span
+                    class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                    <img src="../images/menu/Ranking.png" alt="" class="w-6 h-6 object-contain">Ranking
+                </span>
+            </button>
+
+            <button id="perfil" class="flex flex-col items-center text-[10px] gap-1 cursor-pointer">
+                <span
+                    class="w-14 h-14 flex flex-col items-center justify-center rounded-full border-4 border-transparent transition-all duration-300 hover:bg-gray-200 hover:border-white hover:shadow-lg">
+                    <img src="../images/menu/Perfil.png" alt="" class="w-6 h-6 object-contain">Perfil
+                </span>
+            </button>
+        </nav>
+
+        <script src="../js/desafios.js"></script>
+        <script src="../js/alertas.js"></script>
+</body>
+
+</html>

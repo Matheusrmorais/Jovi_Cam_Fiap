@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="[scrollbar-width:thin] [scrollbar-color:var(--color-banner)_var(--color-fundo)] [&::-webkit-scrollbar]:w-3 [&::-webkit-scrollbar-track]:bg-fundo [&::-webkit-scrollbar-thumb]:bg-banner [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:border-[3px] [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-fundo [&::-webkit-scrollbar-thumb:hover]:bg-hover">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo-pagina">Detalhes da Câmera</title>
+    <!-- O CSS precisa do ../ para voltar uma pasta -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="bg-fundo">
+    <header class="fixed top-0 left-0 right-0 bg-banner p-6 flex items-center z-50">
+        <section class="flex items-center gap-4">
+            <button id="voltar" class="p-1 text-white cursor-pointer" aria-label="Voltar" onclick="window.history.back()">
+                <img src="../images/menu/Voltar.png" alt="Voltar" class="w-10 h-10 object-contain shrink-0">
+            </button>
+            <img id="icone-header" src="../images/menu/Capturar.png" alt="Icone" class="p-1.5 w-12 h-12 bg-white/20 rounded-lg">
+            <h1 id="titulo-header" class="font-poller-one font-bold text-[20px] text-white">Câmera JOVI</h1>
+        </section>
+    </header>
+
+    <main id="conteudo-principal" class="font-inter p-6 pt-32 pb-24 flex flex-col gap-2">
+        
+    </main>
+
+    <!-- O JS precisa do ../ para voltar uma pasta -->
+    <script src="../js/apresentacao_camera.js"></script>
+</body>
+</html>
